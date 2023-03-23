@@ -1,11 +1,15 @@
 package com.castelao.DatosFirebase
 
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.*
 
 class SeventhActivity : AppCompatActivity() {
@@ -50,37 +54,33 @@ class SeventhActivity : AppCompatActivity() {
 
         buscarCliente.setOnClickListener{
             limpiarCampos();
-            databaseReference.child("Clientes").child(codigoCliente.text.toString()).addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-
-                    //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
-                    if (snapshot.exists()) {
-                        var nombre = snapshot.child("nombre").getValue(String::class.java)
-                        var direccion = snapshot.child("direccion").getValue(String::class.java)
-                        var telefono = snapshot.child("telefono").getValue(String::class.java)
-
-                        nombreCliente.setText(nombre)
-                        direccionCliente.setText(direccion)
-                        telefonoCliente.setText(telefono)
-                    }else {
-                        Toast.makeText(this@SeventhActivity, "El código introducido no existe en la base de datos.", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    // Si los datos no se han podido guardar correctamente, lanzamos aviso al usuario
-                    Toast.makeText(this@SeventhActivity, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
-                    ).show()
-                }
-            })
+            var codigo: String = codigoCliente.text.toString()
+            if (TextUtils.isEmpty(codigo)){
+                Toast.makeText(this@SeventhActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
+            }
+           else{
+               buscarCliente(codigo)
+            }
         }
 
         eliminarCliente.setOnClickListener{
-            databaseReference.child("Clientes").child(codigoCliente.text.toString()).removeValue()
+            var codigo: String = codigoCliente.text.toString()
+            if (TextUtils.isEmpty(codigo)){
+                Toast.makeText(this@SeventhActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
+            }else{
+                showDefaultDialog(this)
+            }
         }
 
         modificarCliente.setOnClickListener{
+            var codigo: String = codigoCliente.text.toString()
+            var nombre: String = nombreCliente.text.toString()
+            var direccion: String = direccionCliente.text.toString()
+            var telefono: String = telefonoCliente.text.toString()
 
+            if (TextUtils.isEmpty(codigo) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(telefono) || TextUtils.isEmpty(direccion)) {
+                Toast.makeText(this@SeventhActivity, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         ok.setOnClickListener{
@@ -93,9 +93,61 @@ class SeventhActivity : AppCompatActivity() {
         }
     }
 
+    fun buscarCliente(codigo: String) {
+        databaseReference.child("Clientes").child(codigoCliente.text.toString()).addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
+                if (snapshot.exists()) {
+                    var nombre = snapshot.child("nombre").getValue(String::class.java)
+                    var direccion = snapshot.child("direccion").getValue(String::class.java)
+                    var telefono = snapshot.child("telefono").getValue(String::class.java)
+
+                    nombreCliente.setText(nombre)
+                    direccionCliente.setText(direccion)
+                    telefonoCliente.setText(telefono)
+                }else {
+                    Toast.makeText(this@SeventhActivity, "El código introducido no existe en la base de datos.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Si los datos no se han podido guardar correctamente, lanzamos aviso al usuario
+                Toast.makeText(this@SeventhActivity, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
+    }
+
+    private fun showDefaultDialog(context: Context) {
+        val alertDialog = AlertDialog.Builder(context)
+
+        alertDialog.apply {
+            //setIcon(R.drawable.ic_hello)
+            setTitle("Advertencia")
+            setMessage("¿Está seguro que desea eliminar este cliente?")
+            setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
+                //Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show()
+                databaseReference.child("Clientes").child(codigoCliente.text.toString()).removeValue()
+                limpiarTodosLosCampos()
+                Toast.makeText(this@SeventhActivity, "El cliente ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
+            }
+            setNegativeButton("Cancelar") { _, _ ->
+                Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
+            }
+        }.create().show()
+    }
+
     fun limpiarCampos(){
-        nombreCliente.setText("");
-        direccionCliente.setText("");
-        telefonoCliente.setText("");
+        nombreCliente.setText("")
+        direccionCliente.setText("")
+        telefonoCliente.setText("")
+    }
+
+    fun limpiarTodosLosCampos(){
+        codigoCliente.setText("")
+        nombreCliente.setText("")
+        direccionCliente.setText("")
+        telefonoCliente.setText("")
+
     }
 }

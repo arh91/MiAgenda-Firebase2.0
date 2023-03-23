@@ -52,18 +52,18 @@ class FifthActivity : AppCompatActivity() {
 
         insertarDatos.setOnClickListener {
             // Capturamos cadenas introducidas por usuario y las almacenamos en variables
-            var code: String = codigoCliente.text.toString()
-            var name: String = nombreCliente.text.toString()
-            var phone: String = telefonoCliente.text.toString()
-            var address: String = direccionCliente.text.toString()
+            var codigoCliente: String = codigoCliente.text.toString()
+            var nombreCliente: String = nombreCliente.text.toString()
+            var telefonoCliente: String = telefonoCliente.text.toString()
+            var direccionCliente: String = direccionCliente.text.toString()
 
             // Si alguno de los campos está sin rellenar, lanzamos aviso al usuario para que los rellene todos.
-            if (TextUtils.isEmpty(code) || TextUtils.isEmpty(name) || TextUtils.isEmpty(phone) || TextUtils.isEmpty(address)) {
+            if (TextUtils.isEmpty(codigoCliente) || TextUtils.isEmpty(nombreCliente) || TextUtils.isEmpty(telefonoCliente) || TextUtils.isEmpty(direccionCliente)) {
                 Toast.makeText(this@FifthActivity, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
             } else {
                 //En caso contrario, llamamos al método que añadirá los datos introducidos a Firebase, y posteriormente dejamos en blanco otra vez todos los campos
-                addDatatoFirebase(code, name, address, phone)
-                clearFields()
+                insertarDatos(codigoCliente, nombreCliente, direccionCliente, telefonoCliente)
+                limpiarTodosLosCampos()
             }
         }
 
@@ -85,15 +85,15 @@ class FifthActivity : AppCompatActivity() {
     }
 
 
-    private fun addDatatoFirebase(code: String, name: String, address: String, phone: String) {
+    private fun insertarDatos(codigo: String, nombre: String, direccion: String, telefono: String) {
 
         //Creamos un objeto de nuestra clase Cliente al que le pasamos las 4 cadenas introducidas por el usuario en los editText
-        val cliente = Cliente(code, name, address, phone)
+        //val cliente = Cliente(code, name, address, phone)
 
 
         // Ahora comprobamos si el código introducido por el usuario ya está registrado en nuestra base de datos o no
 
-        databaseReference.child("Clientes").orderByChild("codigo").equalTo(code).addValueEventListener(object : ValueEventListener {
+        databaseReference.child("Clientes").orderByChild("codigo").equalTo(codigo).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 //Si el código ya está registrado, lanzamos un aviso al usuario para que pruebe con otro distinto
@@ -101,7 +101,11 @@ class FifthActivity : AppCompatActivity() {
                     Toast.makeText(this@FifthActivity, "El código introducido ya existe.", Toast.LENGTH_SHORT).show()
                 }else {
                     //En caso contrario, la aplicación registrará el nuevo objeto cliente en la tabla Clientes de nuestra base de datos
-                    databaseReference.child("Clientes").child(code).setValue(cliente)
+                    //databaseReference.child("Clientes").child(code).setValue(cliente)
+                    databaseReference.child("Clientes").child(codigo).child("codigo").setValue(codigo)
+                    databaseReference.child("Clientes").child(codigo).child("dirección").setValue(direccion)
+                    databaseReference.child("Clientes").child(codigo).child("nombre").setValue(nombre)
+                    databaseReference.child("Clientes").child(codigo).child("teléfono").setValue(telefono)
 
                     // Avisamos al usuario que los datos se han guardado correctamente
                     Toast.makeText(this@FifthActivity, "Datos guardados.", Toast.LENGTH_SHORT).show()
@@ -116,7 +120,7 @@ class FifthActivity : AppCompatActivity() {
     }
 
     //Método que vuelve a dejar en blanco todos los campos del layout
-    fun clearFields(){
+    fun limpiarTodosLosCampos(){
        codigoCliente.setText("")
        nombreCliente.setText("")
        direccionCliente.setText("")
