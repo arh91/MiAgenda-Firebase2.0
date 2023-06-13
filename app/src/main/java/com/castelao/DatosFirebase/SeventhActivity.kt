@@ -21,7 +21,7 @@ class SeventhActivity : AppCompatActivity() {
     lateinit var buscarCliente: Button
     lateinit var eliminarCliente: Button
     lateinit var modificarCliente: Button
-    lateinit var ok: Button
+    lateinit var limpiar: Button
     lateinit var atras: Button
 
     lateinit var firebaseDatabase: FirebaseDatabase
@@ -43,6 +43,7 @@ class SeventhActivity : AppCompatActivity() {
         eliminarCliente = findViewById<Button>(R.id.btnEliminarCliente)
         modificarCliente = findViewById<Button>(R.id.btnModificarCliente)
         atras = findViewById<Button>(R.id.btnAtrásSeventh)
+        limpiar = findViewById<Button>(R.id.btnCleanSeventh)
 
 
         firebaseDatabase = FirebaseDatabase.getInstance()
@@ -88,9 +89,13 @@ class SeventhActivity : AppCompatActivity() {
             val intentFifth = Intent(this, FifthActivity::class.java)
             startActivity(intentFifth)
         }
+
+        limpiar.setOnClickListener{
+            limpiarTodosLosCampos()
+        }
     }
 
-    fun buscarCliente() {
+    private fun buscarCliente() {
         databaseReference.child("Clientes").child(codigoCliente.text.toString()).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
@@ -167,13 +172,13 @@ class SeventhActivity : AppCompatActivity() {
     }
 
 
-    fun limpiarCampos(){
+    private fun limpiarCampos(){
         nombreCliente.setText("")
         direccionCliente.setText("")
         telefonoCliente.setText("")
     }
 
-    fun limpiarTodosLosCampos(){
+    private fun limpiarTodosLosCampos(){
         codigoCliente.setText("")
         nombreCliente.setText("")
         direccionCliente.setText("")

@@ -21,7 +21,7 @@ class SixthActivity : AppCompatActivity() {
     lateinit var buscarProveedor: Button
     lateinit var eliminarProveedor: Button
     lateinit var modificarProveedor: Button
-    lateinit var ok: Button
+    lateinit var limpiar: Button
     lateinit var atras: Button
 
     lateinit var firebaseDatabase: FirebaseDatabase
@@ -43,6 +43,7 @@ class SixthActivity : AppCompatActivity() {
         eliminarProveedor = findViewById<Button>(R.id.btnEliminarProveedor)
         modificarProveedor = findViewById<Button>(R.id.btnModificarProveedor)
         atras = findViewById<Button>(R.id.btnAtrásSixth)
+        limpiar = findViewById<Button>(R.id.btnCleanSixth)
 
         firebaseDatabase = FirebaseDatabase.getInstance()
 
@@ -86,6 +87,10 @@ class SixthActivity : AppCompatActivity() {
         atras.setOnClickListener{
             val intentFourth = Intent(this, FourthActivity::class.java)
             startActivity(intentFourth)
+        }
+
+        limpiar.setOnClickListener{
+            limpiarTodosLosCampos()
         }
     }
 
@@ -169,7 +174,8 @@ class SixthActivity : AppCompatActivity() {
     }
 
 
-    fun limpiarTodosLosCampos(){
+    private fun limpiarTodosLosCampos(){
+        codigoProveedor.setText("")
         nombreProveedor.setText("");
         direccionProveedor.setText("");
         telefonoProveedor.setText("");

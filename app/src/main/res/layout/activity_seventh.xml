@@ -25,12 +25,14 @@
         android:id="@+id/edtBuscarCodigoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="21dp"
         android:ems="10"
         android:hint="Código"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnAtrásSeventh"
+        app:layout_constraintStart_toStartOf="@+id/btnBuscarCliente"
         app:layout_constraintTop_toBottomOf="@+id/tituloBuscarCliente" />
 
     <EditText
@@ -70,9 +72,11 @@
         android:id="@+id/btnBuscarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="39dp"
         android:text="Buscar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnEliminarCliente"
+        app:layout_constraintBottom_toTopOf="@+id/btnModificarCliente"
+        app:layout_constraintEnd_toStartOf="@+id/btnEliminarCliente"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -80,28 +84,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginEnd="9dp"
         android:text="Eliminar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBuscarCliente"
         app:layout_constraintTop_toBottomOf="@+id/edtBuscarTelefonoCliente" />
 
     <Button
         android:id="@+id/btnModificarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
         android:text="Modificar"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAtrásSeventh"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/btnBuscarCliente" />
 
     <Button
         android:id="@+id/btnAtrásSeventh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginTop="39dp"
         android:text="Atrás"
+        app:layout_constraintStart_toStartOf="@+id/btnEliminarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/btnEliminarCliente" />
+
+    <Button
+        android:id="@+id/btnCleanSeventh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:text="Limpiar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
