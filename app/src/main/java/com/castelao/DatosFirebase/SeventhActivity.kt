@@ -58,7 +58,7 @@ class SeventhActivity : AppCompatActivity() {
                 Toast.makeText(this@SeventhActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
             }
            else{
-               buscarCliente(codigo)
+               buscarCliente()
             }
         }
 
@@ -90,7 +90,7 @@ class SeventhActivity : AppCompatActivity() {
         }
     }
 
-    fun buscarCliente(codigo: String) {
+    fun buscarCliente() {
         databaseReference.child("Clientes").child(codigoCliente.text.toString()).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
@@ -119,11 +119,9 @@ class SeventhActivity : AppCompatActivity() {
         val alertDialog = AlertDialog.Builder(context)
 
         alertDialog.apply {
-            //setIcon(R.drawable.ic_hello)
             setTitle("Advertencia")
             setMessage("¿Está seguro que desea eliminar este cliente?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
-                //Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show()
                 databaseReference.child("Clientes").child(codigoCliente.text.toString()).removeValue()
                 limpiarTodosLosCampos()
                 Toast.makeText(this@SeventhActivity, "El cliente ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()

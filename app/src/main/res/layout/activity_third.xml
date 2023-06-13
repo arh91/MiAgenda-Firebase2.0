@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="62dp"
         android:layout_marginBottom="262dp"
-        android:text="Registro Proveedores"
+        android:text="Proveedores"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="62dp"
-        android:text="Registro Clientes"
+        android:text="Clientes"
         app:layout_constraintStart_toStartOf="@+id/btnProveedores"
         app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
 
