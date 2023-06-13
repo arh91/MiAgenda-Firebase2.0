@@ -70,54 +70,38 @@
         android:id="@+id/btnBuscarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="66dp"
         android:text="Buscar"
-        app:layout_constraintEnd_toStartOf="@+id/btnEliminarCliente"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtBuscarTelefonoCliente" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEliminarCliente"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEliminarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="75dp"
         android:text="Eliminar"
-        app:layout_constraintBottom_toTopOf="@+id/btnModificarCliente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBuscarCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/edtBuscarTelefonoCliente" />
 
     <Button
         android:id="@+id/btnModificarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="66dp"
         android:text="Modificar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscarCliente" />
-
-    <Button
-        android:id="@+id/btnOkSeventh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="59dp"
-        android:text="OK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtrásSeventh"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAtrásSeventh"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAtrásSeventh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
+        android:layout_marginEnd="87dp"
         android:layout_marginBottom="62dp"
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnOkSeventh" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

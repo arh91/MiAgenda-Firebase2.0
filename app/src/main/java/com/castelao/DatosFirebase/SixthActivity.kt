@@ -38,7 +38,6 @@ class SixthActivity : AppCompatActivity() {
         buscarProveedor = findViewById<Button>(R.id.btnBuscarProveedor)
         eliminarProveedor = findViewById<Button>(R.id.btnEliminarProveedor)
         modificarProveedor = findViewById<Button>(R.id.btnModificarProveedor)
-        ok = findViewById<Button>(R.id.btnOkSeventh)
         atras = findViewById<Button>(R.id.btnAtrásSixth)
 
         firebaseDatabase = FirebaseDatabase.getInstance()
@@ -80,10 +79,6 @@ class SixthActivity : AppCompatActivity() {
         }
 
         modificarProveedor.setOnClickListener{
-
-        }
-
-        ok.setOnClickListener{
 
         }
 

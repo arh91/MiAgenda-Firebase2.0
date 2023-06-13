@@ -103,9 +103,9 @@ class FifthActivity : AppCompatActivity() {
                     //En caso contrario, la aplicación registrará el nuevo objeto cliente en la tabla Clientes de nuestra base de datos
                     //databaseReference.child("Clientes").child(code).setValue(cliente)
                     databaseReference.child("Clientes").child(codigo).child("codigo").setValue(codigo)
-                    databaseReference.child("Clientes").child(codigo).child("dirección").setValue(direccion)
+                    databaseReference.child("Clientes").child(codigo).child("direccion").setValue(direccion)
                     databaseReference.child("Clientes").child(codigo).child("nombre").setValue(nombre)
-                    databaseReference.child("Clientes").child(codigo).child("teléfono").setValue(telefono)
+                    databaseReference.child("Clientes").child(codigo).child("telefono").setValue(telefono)
 
                     // Avisamos al usuario que los datos se han guardado correctamente
                     Toast.makeText(this@FifthActivity, "Datos guardados.", Toast.LENGTH_SHORT).show()
