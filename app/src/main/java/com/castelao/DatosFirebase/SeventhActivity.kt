@@ -53,7 +53,6 @@ class SeventhActivity : AppCompatActivity() {
 
 
         buscarCliente.setOnClickListener{
-            limpiarCampos();
             var codigo: String = codigoCliente.text.toString()
             if (TextUtils.isEmpty(codigo)){
                 Toast.makeText(this@SeventhActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()

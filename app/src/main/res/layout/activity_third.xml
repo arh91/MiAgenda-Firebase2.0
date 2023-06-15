@@ -10,26 +10,25 @@
         android:id="@+id/btnProveedores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="262dp"
+        android:layout_marginBottom="64dp"
         android:text="Proveedores"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/btnClientes"
+        app:layout_constraintStart_toStartOf="@+id/btnClientes" />
 
     <Button
         android:id="@+id/btnClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginBottom="61dp"
         android:text="Clientes"
-        app:layout_constraintStart_toStartOf="@+id/btnProveedores"
-        app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
+        app:layout_constraintStart_toStartOf="@+id/btnAtrasThird" />
 
     <Button
         android:id="@+id/btnAtrasThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="41dp"
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

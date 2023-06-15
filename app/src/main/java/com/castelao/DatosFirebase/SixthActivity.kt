@@ -52,10 +52,9 @@ class SixthActivity : AppCompatActivity() {
 
 
         buscarProveedor.setOnClickListener{
-            limpiarTodosLosCampos();
             var codigo: String = codigoProveedor.text.toString()
             if (TextUtils.isEmpty(codigo)){
-                Toast.makeText(this@SixthActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SixthActivity, "Por favor, introduzca un código de proveedor.", Toast.LENGTH_SHORT).show()
             }
             else{
                 buscarProveedor()
