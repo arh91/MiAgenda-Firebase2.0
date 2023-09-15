@@ -1,6 +1,8 @@
 package com.castelao.DatosFirebase
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.database.*
+
 
 class FourthActivity : AppCompatActivity() {
 
@@ -88,6 +91,12 @@ class FourthActivity : AppCompatActivity() {
 
     private fun addDatatoFirebase(code: String, name: String, address: String, phone: String) {
 
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         //Creamos un objeto de nuestra clase Proveedor al que le pasamos las 4 cadenas introducidas por el usuario en los editText
         val proveedor = Proveedor(code, name, address, phone)
 
@@ -121,6 +130,13 @@ class FourthActivity : AppCompatActivity() {
         nombreProveedor.setText("")
         direccionProveedor.setText("")
         telefonoProveedor.setText("")
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        val activeNetworkInfo = connectivityManager.activeNetworkInfo
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
 }
 

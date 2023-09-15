@@ -3,6 +3,7 @@ package com.castelao.DatosFirebase
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -67,7 +68,7 @@ class SeventhActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(codigo)){
                 Toast.makeText(this@SeventhActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
             }else{
-                showDefaultDialog(this)
+                eliminarCliente(this)
             }
         }
 
@@ -80,7 +81,7 @@ class SeventhActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(codigo) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(telefono) || TextUtils.isEmpty(direccion)) {
                 Toast.makeText(this@SeventhActivity, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
             }else{
-                showDefaultDialogModify(this)
+                modificarCliente(this)
             }
         }
 
@@ -95,6 +96,12 @@ class SeventhActivity : AppCompatActivity() {
     }
 
     private fun buscarCliente() {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         databaseReference.child("Clientes").child(codigoCliente.text.toString()).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
@@ -119,7 +126,13 @@ class SeventhActivity : AppCompatActivity() {
         })
     }
 
-    private fun showDefaultDialog(context: Context) {
+    private fun eliminarCliente(context: Context) {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val alertDialog = AlertDialog.Builder(context)
 
         alertDialog.apply {
@@ -137,7 +150,13 @@ class SeventhActivity : AppCompatActivity() {
     }
 
 
-    private fun showDefaultDialogModify(context: Context) {
+    private fun modificarCliente(context: Context) {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val alertDialog = AlertDialog.Builder(context)
 
         alertDialog.apply {
@@ -183,5 +202,12 @@ class SeventhActivity : AppCompatActivity() {
         direccionCliente.setText("")
         telefonoCliente.setText("")
 
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        val activeNetworkInfo = connectivityManager.activeNetworkInfo
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
 }

@@ -8,7 +8,8 @@ import android.widget.Button
 import android.widget.TextView
 
 
-class MainActivity : AppCompatActivity() {
+class
+MainActivity : AppCompatActivity() {
 
     // definir el requestCode
     val RESULTADO_UNO=1

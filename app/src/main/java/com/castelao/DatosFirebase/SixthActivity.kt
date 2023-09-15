@@ -3,6 +3,7 @@ package com.castelao.DatosFirebase
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -66,7 +67,7 @@ class SixthActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(codigo)){
                 Toast.makeText(this@SixthActivity, "Por favor, introduzca un código de cliente.", Toast.LENGTH_SHORT).show()
             }else{
-                showDefaultDialog(this)
+                eliminarProveedor(this)
             }
         }
 
@@ -79,7 +80,7 @@ class SixthActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(codigo) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(telefono) || TextUtils.isEmpty(direccion)) {
                 Toast.makeText(this@SixthActivity, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
             }else{
-                showDefaultDialogModify(this)
+                modificarProveedor(this)
             }
         }
 
@@ -95,6 +96,12 @@ class SixthActivity : AppCompatActivity() {
 
 
     private fun buscarProveedor(){
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).addValueEventListener(object :
             ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -122,12 +129,18 @@ class SixthActivity : AppCompatActivity() {
     }
 
 
-    private fun showDefaultDialog(context: Context) {
+    private fun eliminarProveedor(context: Context) {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val alertDialog = AlertDialog.Builder(context)
 
         alertDialog.apply {
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea eliminar este cliente?")
+            setMessage("¿Está seguro que desea eliminar éste proveedor?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).removeValue()
                 limpiarTodosLosCampos()
@@ -140,12 +153,18 @@ class SixthActivity : AppCompatActivity() {
     }
 
 
-    private fun showDefaultDialogModify(context: Context) {
+    private fun modificarProveedor(context: Context) {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val alertDialog = AlertDialog.Builder(context)
 
         alertDialog.apply {
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea modificar este cliente?")
+            setMessage("¿Está seguro que desea modificar éste proveedor?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 val reference = databaseReference.child("Proveedores").child(codigoProveedor.text.toString())
 
@@ -178,5 +197,12 @@ class SixthActivity : AppCompatActivity() {
         nombreProveedor.setText("");
         direccionProveedor.setText("");
         telefonoProveedor.setText("");
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        val activeNetworkInfo = connectivityManager.activeNetworkInfo
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
 }
