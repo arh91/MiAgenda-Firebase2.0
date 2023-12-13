@@ -104,13 +104,12 @@ class SixthActivity : AppCompatActivity() {
 
         databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).addValueEventListener(object :
             ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-
+            override fun onDataChange(snapshotBusqueda: DataSnapshot) {
                 //Si el código está en la base de datos, la aplicación lo buscará y mostrará en la interfaz el resto de campos asociados a dicho código
-                if (snapshot.exists()) {
-                    var nombre = snapshot.child("nombre").getValue(String::class.java)
-                    var direccion = snapshot.child("direccion").getValue(String::class.java)
-                    var telefono = snapshot.child("telefono").getValue(String::class.java)
+                if (snapshotBusqueda.exists()) {
+                    var nombre = snapshotBusqueda.child("nombre").getValue(String::class.java)
+                    var direccion = snapshotBusqueda.child("direccion").getValue(String::class.java)
+                    var telefono = snapshotBusqueda.child("telefono").getValue(String::class.java)
 
                     nombreProveedor.setText(nombre)
                     direccionProveedor.setText(direccion)
@@ -137,10 +136,11 @@ class SixthActivity : AppCompatActivity() {
         }
 
         val alertDialog = AlertDialog.Builder(context)
+        val codigo = codigoProveedor.text.toString()
 
         alertDialog.apply {
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea eliminar éste proveedor?")
+            setMessage("¿Está seguro que desea eliminar el proveedor "+codigo+"?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).removeValue()
                 limpiarTodosLosCampos()
@@ -148,6 +148,7 @@ class SixthActivity : AppCompatActivity() {
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
+                limpiarTodosLosCampos()
             }
         }.create().show()
     }
@@ -161,10 +162,11 @@ class SixthActivity : AppCompatActivity() {
         }
 
         val alertDialog = AlertDialog.Builder(context)
+        val codigo = codigoProveedor.text.toString()
 
         alertDialog.apply {
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea modificar éste proveedor?")
+            setMessage("¿Está seguro que desea modificar el proveedor "+codigo+"?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 val reference = databaseReference.child("Proveedores").child(codigoProveedor.text.toString())
 
@@ -177,12 +179,13 @@ class SixthActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         // La actualización se realizó exitosamente
                         Toast.makeText(this@SixthActivity, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
+                        limpiarTodosLosCampos()
                     }
                     .addOnFailureListener {
                         // Ocurrió un error al actualizar el registro
                         Toast.makeText(this@SixthActivity, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
+                        limpiarTodosLosCampos()
                     }
-                limpiarTodosLosCampos()
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()

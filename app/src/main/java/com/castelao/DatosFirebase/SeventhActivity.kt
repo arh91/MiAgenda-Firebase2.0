@@ -134,10 +134,11 @@ class SeventhActivity : AppCompatActivity() {
         }
 
         val alertDialog = AlertDialog.Builder(context)
+        val codigo = codigoCliente.text.toString()
 
         alertDialog.apply {
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea eliminar este cliente?")
+            setMessage("¿Está seguro que desea eliminar el cliente "+codigo+"?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Clientes").child(codigoCliente.text.toString()).removeValue()
                 limpiarTodosLosCampos()
@@ -145,6 +146,7 @@ class SeventhActivity : AppCompatActivity() {
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
+                limpiarTodosLosCampos()
             }
         }.create().show()
     }
@@ -158,11 +160,12 @@ class SeventhActivity : AppCompatActivity() {
         }
 
         val alertDialog = AlertDialog.Builder(context)
+        val codigo = codigoCliente.text.toString()
 
         alertDialog.apply {
             //setIcon(R.drawable.ic_hello)
             setTitle("Advertencia")
-            setMessage("¿Está seguro que desea modificar este cliente?")
+            setMessage("¿Está seguro que desea modificar el cliente "+codigo+"?")
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 val reference = databaseReference.child("Clientes").child(codigoCliente.text.toString())
 
@@ -175,25 +178,19 @@ class SeventhActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         // La actualización se realizó exitosamente
                         Toast.makeText(this@SeventhActivity, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
+                        limpiarTodosLosCampos()
                     }
                     .addOnFailureListener {
                         // Ocurrió un error al actualizar el registro
                         Toast.makeText(this@SeventhActivity, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
+                        limpiarTodosLosCampos()
                     }
-                limpiarTodosLosCampos()
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
                 limpiarTodosLosCampos()
             }
         }.create().show()
-    }
-
-
-    private fun limpiarCampos(){
-        nombreCliente.setText("")
-        direccionCliente.setText("")
-        telefonoCliente.setText("")
     }
 
     private fun limpiarTodosLosCampos(){

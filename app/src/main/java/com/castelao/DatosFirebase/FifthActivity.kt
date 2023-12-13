@@ -96,12 +96,11 @@ class FifthActivity : AppCompatActivity() {
         }
 
         //Creamos un objeto de nuestra clase Cliente al que le pasamos las 4 cadenas introducidas por el usuario en los editText
-        //val cliente = Cliente(code, name, address, phone)
 
 
         // Ahora comprobamos si el código introducido por el usuario ya está registrado en nuestra base de datos o no
 
-        databaseReference.child("Clientes").orderByChild("codigo").equalTo(codigo).addValueEventListener(object : ValueEventListener {
+        databaseReference.child("Clientes").child(codigo).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 //Si el código ya está registrado, lanzamos un aviso al usuario para que pruebe con otro distinto

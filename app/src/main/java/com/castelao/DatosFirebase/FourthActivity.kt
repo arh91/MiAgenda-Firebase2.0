@@ -102,11 +102,10 @@ class FourthActivity : AppCompatActivity() {
 
         // Ahora comprobamos si el código introducido por el usuario ya está registrado en nuestra base de datos o no
 
-        databaseReference.child("Proveedores").orderByChild("codigo").equalTo(code).addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-
+        databaseReference.child("Proveedores").child(code).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshotRegistro: DataSnapshot) {
                 //Si el código ya está registrado, lanzamos un aviso al usuario para que pruebe con otro distinto
-                if(snapshot.exists()){
+                if(snapshotRegistro.exists()){
                     Toast.makeText(this@FourthActivity, "El código introducido ya existe.", Toast.LENGTH_SHORT).show()
                 }else {
                     //En caso contrario, la aplicación registrará el nuevo objeto proveedor en la tabla Proveedores de nuestra base de datos
