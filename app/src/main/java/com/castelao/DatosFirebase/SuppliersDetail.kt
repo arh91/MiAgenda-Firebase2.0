@@ -14,6 +14,7 @@ import com.google.firebase.database.*
 
 class SuppliersDetail : AppCompatActivity() {
 
+    private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
     lateinit var codigoProveedor: EditText
@@ -34,7 +35,8 @@ class SuppliersDetail : AppCompatActivity() {
         val code = intent.getStringExtra("code")
         // Aquí deberías cargar los detalles adicionales desde Firebase usando el código
 
-        databaseReference = FirebaseDatabase.getInstance().reference.child("Proveedores")
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase").child("Proveedores")
 
         codigoProveedor = findViewById(R.id.editText_codigo_prov)
         nombreProveedor = findViewById(R.id.editText_nombre_prov)
@@ -93,6 +95,7 @@ class SuppliersDetail : AppCompatActivity() {
             return
         }
 
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase")
         val alertDialog = AlertDialog.Builder(context)
         val codigo = codigoProveedor.text.toString()
 
@@ -126,6 +129,8 @@ class SuppliersDetail : AppCompatActivity() {
             Toast.makeText(this, "No se puede realizar ésta acción porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
             return
         }
+
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase")
 
         val alertDialog = AlertDialog.Builder(context)
         val codigo = codigoProveedor.text.toString()

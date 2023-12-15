@@ -14,6 +14,7 @@ import com.google.firebase.database.*
 
 class CustomersDetail : AppCompatActivity() {
 
+    private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
     lateinit var codigoCliente: EditText
@@ -34,7 +35,8 @@ class CustomersDetail : AppCompatActivity() {
         val code = intent.getStringExtra("code")
         // Aquí deberías cargar los detalles adicionales desde Firebase usando el código
 
-        databaseReference = FirebaseDatabase.getInstance().reference.child("Clientes")
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase").child("Clientes")
 
         codigoCliente = findViewById(R.id.editText_codigo_cli)
         nombreCliente = findViewById(R.id.editText_nombre_cli)
@@ -94,6 +96,7 @@ class CustomersDetail : AppCompatActivity() {
             return
         }
 
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase")
         val alertDialog = AlertDialog.Builder(context)
         val codigo = codigoCliente.text.toString()
 
@@ -128,6 +131,7 @@ class CustomersDetail : AppCompatActivity() {
             return
         }
 
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase")
         val alertDialog = AlertDialog.Builder(context)
         val codigo = codigoCliente.text.toString()
 

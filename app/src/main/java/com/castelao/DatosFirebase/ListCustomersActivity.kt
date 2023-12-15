@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.castelao.datosFirebase.CustomersAdapter
 import com.google.firebase.database.*
 
 class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickListener {
