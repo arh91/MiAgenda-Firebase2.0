@@ -22,7 +22,7 @@ class FourthActivity : AppCompatActivity() {
 
     lateinit var insertarDatos: Button
     lateinit var atras: Button
-    lateinit var masOpciones: Button
+    lateinit var listaProveedores: Button
 
     lateinit var firebaseDatabase: FirebaseDatabase
 
@@ -42,7 +42,7 @@ class FourthActivity : AppCompatActivity() {
 
         insertarDatos = findViewById<Button>(R.id.btnEnviarProveedor)
         atras = findViewById<Button>(R.id.btnAtrasFourth)
-        masOpciones = findViewById<Button>(R.id.btnOpcionesProveedor)
+        listaProveedores = findViewById<Button>(R.id.btnListaProveedores)
 
 
         firebaseDatabase = FirebaseDatabase.getInstance()
@@ -73,9 +73,9 @@ class FourthActivity : AppCompatActivity() {
 
         //Añadimos evento al botón opcionesProveedor
 
-        masOpciones.setOnClickListener{
-            val toSixth = Intent(this, SixthActivity::class.java)
-            startActivity(toSixth)
+        listaProveedores.setOnClickListener{
+            val toListSuppliers = Intent(this, ListSuppliersActivity::class.java)
+            startActivity(toListSuppliers)
         }
 
 

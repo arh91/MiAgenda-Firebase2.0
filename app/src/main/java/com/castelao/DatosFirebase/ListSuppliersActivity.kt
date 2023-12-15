@@ -1,7 +1,9 @@
-package com.castelao.miAgenda
+package com.castelao.DatosFirebase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -9,6 +11,7 @@ import com.google.firebase.database.*
 class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var atras: Button
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +21,14 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        atras = findViewById(R.id.btnAtrasRegistroProveedores)
+        atras.setOnClickListener(){
+            val toFourth = Intent(this, FourthActivity::class.java)
+            startActivity(toFourth)
+        }
+
         // Inicializar la referencia a la base de datos de Firebase
-        databaseReference = FirebaseDatabase.getInstance().reference.child("tu_tabla")
+        databaseReference = FirebaseDatabase.getInstance().reference.child("Proveedores")
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
         fetchDataAndUpdateUI()
@@ -47,7 +56,7 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
 
     override fun onItemClick(code: String) {
         // Al hacer clic en un elemento, abrir la actividad de detalles
-        val intent = Intent(this, DetailsActivity::class.java)
+        val intent = Intent(this, SuppliersDetail::class.java)
         intent.putExtra("code", code)
         startActivity(intent)
     }

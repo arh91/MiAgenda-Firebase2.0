@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ListCustomersActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/btnAtrasRegistroClientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATRÁS"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="611dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

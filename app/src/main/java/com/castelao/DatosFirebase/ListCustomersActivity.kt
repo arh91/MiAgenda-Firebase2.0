@@ -1,14 +1,18 @@
-package com.castelao.miAgenda
+package com.castelao.DatosFirebase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.castelao.datosFirebase.CustomersAdapter
 import com.google.firebase.database.*
 
 class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var atras: Button
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +22,14 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        atras = findViewById(R.id.btnAtrasRegistroClientes)
+        atras.setOnClickListener(){
+            val toFifth = Intent(this, FifthActivity::class.java)
+            startActivity(toFifth)
+        }
+
         // Inicializar la referencia a la base de datos de Firebase
-        databaseReference = FirebaseDatabase.getInstance().reference.child("tu_tabla")
+        databaseReference = FirebaseDatabase.getInstance().reference.child("Clientes")
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
         fetchDataAndUpdateUI()
@@ -47,7 +57,7 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
 
     override fun onItemClick(code: String) {
         // Al hacer clic en un elemento, abrir la actividad de detalles
-        val intent = Intent(this, DetailsActivity::class.java)
+        val intent = Intent(this, CustomersDetail::class.java)
         intent.putExtra("code", code)
         startActivity(intent)
     }
