@@ -14,6 +14,7 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var atras: Button
+    private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,8 +30,10 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
             startActivity(toFifth)
         }
 
+        firebaseDatabase = FirebaseDatabase.getInstance()
+
         // Inicializar la referencia a la base de datos de Firebase
-        databaseReference = FirebaseDatabase.getInstance().reference.child("Clientes")
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase").child("Clientes")
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
         fetchDataAndUpdateUI()

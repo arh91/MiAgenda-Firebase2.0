@@ -13,6 +13,7 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var atras: Button
+    private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +29,10 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
             startActivity(toFourth)
         }
 
+        firebaseDatabase = FirebaseDatabase.getInstance()
+
         // Inicializar la referencia a la base de datos de Firebase
-        databaseReference = FirebaseDatabase.getInstance().reference.child("Proveedores")
+        databaseReference = firebaseDatabase!!.getReference("MyDatabase").child("Proveedores")
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
         fetchDataAndUpdateUI()
