@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.castelao.datosFirebase.CustomersAdapter
@@ -50,7 +51,9 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Manejar el error si es necesario
+                // Si los datos no se han podido mostrar correctamente, lanzamos aviso al usuario
+                Toast.makeText(this@ListCustomersActivity, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }

@@ -17,6 +17,18 @@
         android:theme="@style/Theme.DatosFirebase"
         tools:targetApi="31">
         <activity
+            android:name=".CustomersDetail"
+            android:exported="false" />
+        <activity
+            android:name=".SuppliersDetail"
+            android:exported="false" />
+        <activity
+            android:name=".ListCustomersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListSuppliersActivity"
+            android:exported="false" />
+        <activity
             android:name=".SeventhActivity"
             android:exported="false" />
         <activity

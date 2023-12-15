@@ -2,15 +2,14 @@ package com.castelao.DatosFirebase
 
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.castelao.DatosFirebase.R
 import com.google.firebase.database.*
 
 class SuppliersDetail : AppCompatActivity() {
@@ -25,6 +24,8 @@ class SuppliersDetail : AppCompatActivity() {
     lateinit var modificarProveedor: Button
     lateinit var limpiar: Button
     lateinit var atras: Button
+
+    var salir: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,18 @@ class SuppliersDetail : AppCompatActivity() {
         modificarProveedor = findViewById(R.id.btn_Modificar_Prov)
         atras = findViewById(R.id.btn_Atras_Lista_Prov)
 
+        eliminarProveedor.setOnClickListener(){
+            eliminarProveedor(this)
+        }
+
+        modificarProveedor.setOnClickListener(){
+            modificarProveedor(this)
+        }
+
+        atras.setOnClickListener(){
+            val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
+            startActivity(intentListSuppliers)
+        }
         // Aquí deberías cargar los detalles adicionales desde Firebase usando el código
         fetchDataAndUpdateUI(code)
     }
@@ -53,17 +66,20 @@ class SuppliersDetail : AppCompatActivity() {
             databaseReference.child(it).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     // Obtener los campos adicionales desde Firebase
-                    val campo1 = snapshot.child("nombre").getValue(String::class.java)
-                    val campo2 = snapshot.child("direccion").getValue(String::class.java)
-                    val campo3 = snapshot.child("telefono").getValue(String::class.java)
+                    val nombre = snapshot.child("nombre").getValue(String::class.java)
+                    val direccion = snapshot.child("direccion").getValue(String::class.java)
+                    val telefono = snapshot.child("telefono").getValue(String::class.java)
 
-                    // Actualizar el TextView con los detalles
-                    val tvDetails: TextView = findViewById(R.id.tvDetails)
-                    tvDetails.text = "Detalles para el código $code:\nCampo1: $campo1\nCampo2: $campo2\nCampo3: $campo3"
+                    codigoProveedor.setText(code)
+                    nombreProveedor.setText(nombre)
+                    direccionProveedor.setText(direccion)
+                    telefonoProveedor.setText(telefono)
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    // Manejar el error si es necesario
+                    // Si los datos no se han podido mostrar correctamente, lanzamos aviso al usuario
+                    Toast.makeText(this@SuppliersDetail, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
+                    ).show()
                 }
             })
         }
@@ -86,6 +102,7 @@ class SuppliersDetail : AppCompatActivity() {
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).removeValue()
                 limpiarTodosLosCampos()
+                salir = true
                 Toast.makeText(this@SuppliersDetail, "El proveedor ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
             }
             setNegativeButton("Cancelar") { _, _ ->
@@ -93,6 +110,13 @@ class SuppliersDetail : AppCompatActivity() {
                 limpiarTodosLosCampos()
             }
         }.create().show()
+
+        if(salir) {
+            val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
+            startActivity(intentListSuppliers)
+            salir = false
+        }
+
     }
 
 
@@ -121,11 +145,13 @@ class SuppliersDetail : AppCompatActivity() {
                     .addOnSuccessListener {
                         // La actualización se realizó exitosamente
                         Toast.makeText(this@SuppliersDetail, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
+                        salir = true
                         limpiarTodosLosCampos()
                     }
                     .addOnFailureListener {
                         // Ocurrió un error al actualizar el registro
                         Toast.makeText(this@SuppliersDetail, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
+                        salir = true
                         limpiarTodosLosCampos()
                     }
             }
@@ -134,6 +160,12 @@ class SuppliersDetail : AppCompatActivity() {
                 limpiarTodosLosCampos()
             }
         }.create().show()
+
+        if(salir) {
+            val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
+            startActivity(intentListSuppliers)
+            salir = false
+        }
     }
 
 

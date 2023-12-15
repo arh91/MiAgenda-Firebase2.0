@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -49,7 +50,9 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Manejar el error si es necesario
+                // Si los datos no se han podido mostrar correctamente, lanzamos aviso al usuario
+                Toast.makeText(this@ListSuppliersActivity, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }

@@ -120,7 +120,7 @@ class SixthActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Si los datos no se han podido guardar correctamente, lanzamos aviso al usuario
+                // Si los datos no se han podido mostrar correctamente, lanzamos aviso al usuario
                 Toast.makeText(this@SixthActivity, "No se pudieron obtener los datos. $error", Toast.LENGTH_SHORT
                 ).show()
             }
