@@ -26,7 +26,6 @@ class CustomersDetail : AppCompatActivity() {
     lateinit var limpiar: Button
     lateinit var atras: Button
 
-    var salir: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,21 +105,13 @@ class CustomersDetail : AppCompatActivity() {
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Clientes").child(codigoCliente.text.toString()).removeValue()
                 limpiarTodosLosCampos()
-                salir = true
+                volverAListaClientes()
                 Toast.makeText(this@CustomersDetail, "El cliente ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
-                limpiarTodosLosCampos()
             }
         }.create().show()
-
-        if(salir) {
-            val intentListCustomers = Intent(this, ListCustomersActivity::class.java)
-            startActivity(intentListCustomers)
-            salir = false
-        }
-
     }
 
 
@@ -150,27 +141,20 @@ class CustomersDetail : AppCompatActivity() {
                     .addOnSuccessListener {
                         // La actualización se realizó exitosamente
                         Toast.makeText(this@CustomersDetail, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
-                        salir = true
                         limpiarTodosLosCampos()
+                        volverAListaClientes()
                     }
                     .addOnFailureListener {
                         // Ocurrió un error al actualizar el registro
                         Toast.makeText(this@CustomersDetail, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
-                        salir = true
                         limpiarTodosLosCampos()
+                        volverAListaClientes()
                     }
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
-                limpiarTodosLosCampos()
             }
         }.create().show()
-
-        if(salir) {
-            val intentListCustomers = Intent(this, ListCustomersActivity::class.java)
-            startActivity(intentListCustomers)
-            salir = false
-        }
     }
 
 
@@ -179,6 +163,11 @@ class CustomersDetail : AppCompatActivity() {
         nombreCliente.setText("");
         direccionCliente.setText("");
         telefonoCliente.setText("");
+    }
+
+    private fun volverAListaClientes(){
+        val intentListCustomers = Intent(this, ListCustomersActivity::class.java)
+        startActivity(intentListCustomers)
     }
 
 

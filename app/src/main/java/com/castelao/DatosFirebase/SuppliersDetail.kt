@@ -26,7 +26,6 @@ class SuppliersDetail : AppCompatActivity() {
     lateinit var limpiar: Button
     lateinit var atras: Button
 
-    var salir: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,21 +104,13 @@ class SuppliersDetail : AppCompatActivity() {
             setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
                 databaseReference.child("Proveedores").child(codigoProveedor.text.toString()).removeValue()
                 limpiarTodosLosCampos()
-                salir = true
+                volverAListaProveedores()
                 Toast.makeText(this@SuppliersDetail, "El proveedor ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
-                limpiarTodosLosCampos()
             }
         }.create().show()
-
-        if(salir) {
-            val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
-            startActivity(intentListSuppliers)
-            salir = false
-        }
-
     }
 
 
@@ -150,27 +141,20 @@ class SuppliersDetail : AppCompatActivity() {
                     .addOnSuccessListener {
                         // La actualización se realizó exitosamente
                         Toast.makeText(this@SuppliersDetail, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
-                        salir = true
                         limpiarTodosLosCampos()
+                        volverAListaProveedores()
                     }
                     .addOnFailureListener {
                         // Ocurrió un error al actualizar el registro
                         Toast.makeText(this@SuppliersDetail, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
-                        salir = true
                         limpiarTodosLosCampos()
+                        volverAListaProveedores()
                     }
             }
             setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
-                limpiarTodosLosCampos()
             }
         }.create().show()
-
-        if(salir) {
-            val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
-            startActivity(intentListSuppliers)
-            salir = false
-        }
     }
 
 
@@ -179,6 +163,11 @@ class SuppliersDetail : AppCompatActivity() {
         nombreProveedor.setText("");
         direccionProveedor.setText("");
         telefonoProveedor.setText("");
+    }
+
+    private fun volverAListaProveedores(){
+        val intentListSuppliers = Intent(this, ListSuppliersActivity::class.java)
+        startActivity(intentListSuppliers)
     }
 
 
