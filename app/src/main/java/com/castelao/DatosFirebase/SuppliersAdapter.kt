@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class SuppliersAdapter (private val data: List<String>, private val listener: OnItemClickListener) : RecyclerView.Adapter<SuppliersAdapter.ViewHolder>() {
 
     interface OnItemClickListener {
-        fun onItemClick(code: String)
+        fun accederDatosProveedor(code: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,7 +22,7 @@ class SuppliersAdapter (private val data: List<String>, private val listener: On
         holder.tvCode.text = item
 
         holder.itemView.setOnClickListener {
-            listener.onItemClick(item)
+            listener.accederDatosProveedor(item)
         }
     }
 

@@ -59,11 +59,11 @@ class CustomersDetail : AppCompatActivity() {
             startActivity(intentListCustomers)
         }
         // Aquí deberías cargar los detalles adicionales desde Firebase usando el código
-        fetchDataAndUpdateUI(code)
+        listarDatosCliente(code)
     }
 
 
-    private fun fetchDataAndUpdateUI(code: String?) {
+    private fun listarDatosCliente(code: String?) {
         code?.let {
             databaseReference.child(it).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {

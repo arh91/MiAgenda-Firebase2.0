@@ -5,13 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.castelao.DatosFirebase.R
-import com.castelao.DatosFirebase.SuppliersAdapter
 
 class CustomersAdapter (private val data: List<String>, private val listener: OnItemClickListener) : RecyclerView.Adapter<CustomersAdapter.ViewHolder>() {
 
     interface OnItemClickListener {
-        fun onItemClick(code: String)
+        fun accederDatosCliente(code: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,7 +22,7 @@ class CustomersAdapter (private val data: List<String>, private val listener: On
         holder.tvCode.text = item
 
         holder.itemView.setOnClickListener {
-            listener.onItemClick(item)
+            listener.accederDatosCliente(item)
         }
     }
 

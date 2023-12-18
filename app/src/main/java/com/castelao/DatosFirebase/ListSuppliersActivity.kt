@@ -35,10 +35,10 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
         databaseReference = firebaseDatabase!!.getReference("MyDatabase").child("Proveedores")
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
-        fetchDataAndUpdateUI()
+        listarRegistrosProveedores()
     }
 
-    private fun fetchDataAndUpdateUI() {
+    private fun listarRegistrosProveedores() {
         databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val dataList = mutableListOf<String>()
@@ -60,7 +60,7 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
         })
     }
 
-    override fun onItemClick(code: String) {
+    override fun accederDatosProveedor(code: String) {
         // Al hacer clic en un elemento, abrir la actividad de detalles
         val intent = Intent(this, SuppliersDetail::class.java)
         intent.putExtra("code", code)

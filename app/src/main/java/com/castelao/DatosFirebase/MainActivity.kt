@@ -19,10 +19,9 @@ MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val gosecond = findViewById<Button>(R.id.askMeBtn)
         val registro = findViewById<Button>(R.id.btnRegistro)
         val salir = findViewById<Button>(R.id.btnSalir)
-
+        /*val gosecond = findViewById<Button>(R.id.askMeBtn)
         gosecond.setOnClickListener{
             // Crea un Intent para iniciar la segunda actividad
 
@@ -36,7 +35,7 @@ MainActivity : AppCompatActivity() {
             startActivityForResult(intent, RESULTADO_UNO)
 
             startActivityForResult(intent, RESULTADO_DOS)
-        }
+        }*/
 
 
         registro.setOnClickListener{
@@ -54,7 +53,7 @@ MainActivity : AppCompatActivity() {
 
     }
 
-    @Deprecated("Deprecated in Java")
+    /*@Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -77,5 +76,5 @@ MainActivity : AppCompatActivity() {
             // Other result codes
             else -> {}
         }
-    }
+    }*/
 }
