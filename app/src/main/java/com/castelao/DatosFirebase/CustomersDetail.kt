@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -76,6 +77,8 @@ class CustomersDetail : AppCompatActivity() {
                     nombreCliente.setText(nombre)
                     direccionCliente.setText(direccion)
                     telefonoCliente.setText(telefono)
+
+                    codigoCliente.isEnabled = false
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -125,36 +128,44 @@ class CustomersDetail : AppCompatActivity() {
         databaseReference = firebaseDatabase!!.getReference("MyDatabase")
         val alertDialog = AlertDialog.Builder(context)
         val codigo = codigoCliente.text.toString()
+        val nombre = nombreCliente.text.toString()
+        val direccion = direccionCliente.text.toString()
+        val telefono = telefonoCliente.text.toString()
 
-        alertDialog.apply {
-            setTitle("Advertencia")
-            setMessage("¿Está seguro que desea modificar el cliente "+codigo+"?")
-            setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
-                val reference = databaseReference.child("Clientes").child(codigoCliente.text.toString())
+        if (TextUtils.isEmpty(codigo) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(telefono) || TextUtils.isEmpty(direccion)) {
+            Toast.makeText(this@CustomersDetail, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            alertDialog.apply {
+                setTitle("Advertencia")
+                setMessage("¿Está seguro que desea modificar el cliente "+codigo+"?")
+                setPositiveButton("Aceptar") { _: DialogInterface?, _: Int ->
+                    val reference = databaseReference.child("Clientes").child(codigoCliente.text.toString())
 
-                val update = HashMap<String, Any>()
-                update["direccion"] = direccionCliente.text.toString()
-                update["nombre"] = nombreCliente.text.toString()
-                update["telefono"] = telefonoCliente.text.toString()
+                    val update = HashMap<String, Any>()
+                    update["direccion"] = direccionCliente.text.toString()
+                    update["nombre"] = nombreCliente.text.toString()
+                    update["telefono"] = telefonoCliente.text.toString()
 
-                reference.updateChildren(update)
-                    .addOnSuccessListener {
-                        // La actualización se realizó exitosamente
-                        Toast.makeText(this@CustomersDetail, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
-                        limpiarTodosLosCampos()
-                        volverAListaClientes()
-                    }
-                    .addOnFailureListener {
-                        // Ocurrió un error al actualizar el registro
-                        Toast.makeText(this@CustomersDetail, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
-                        limpiarTodosLosCampos()
-                        volverAListaClientes()
-                    }
-            }
-            setNegativeButton("Cancelar") { _, _ ->
-                Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
-            }
-        }.create().show()
+                    reference.updateChildren(update)
+                        .addOnSuccessListener {
+                            // La actualización se realizó exitosamente
+                            Toast.makeText(this@CustomersDetail, "Registro actualizado correctamente.", Toast.LENGTH_SHORT).show()
+                            limpiarTodosLosCampos()
+                            volverAListaClientes()
+                        }
+                        .addOnFailureListener {
+                            // Ocurrió un error al actualizar el registro
+                            Toast.makeText(this@CustomersDetail, "Error al actualizar el registro.", Toast.LENGTH_SHORT).show()
+                            limpiarTodosLosCampos()
+                            volverAListaClientes()
+                        }
+                }
+                setNegativeButton("Cancelar") { _, _ ->
+                    Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
+                }
+            }.create().show()
+        }
     }
 
 
