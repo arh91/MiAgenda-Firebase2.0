@@ -27,6 +27,10 @@ class CustomersDetail : AppCompatActivity() {
     lateinit var limpiar: Button
     lateinit var atras: Button
 
+    lateinit var nombreAntiguo: String
+    lateinit var telefonoAntiguo: String
+    lateinit var direccionAntigua: String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +83,10 @@ class CustomersDetail : AppCompatActivity() {
                     telefonoCliente.setText(telefono)
 
                     codigoCliente.isEnabled = false
+
+                    nombreAntiguo = nombreCliente.text.toString()
+                    direccionAntigua = direccionCliente.text.toString()
+                    telefonoAntiguo = telefonoCliente.text.toString()
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -134,6 +142,9 @@ class CustomersDetail : AppCompatActivity() {
 
         if (TextUtils.isEmpty(codigo) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(telefono) || TextUtils.isEmpty(direccion)) {
             Toast.makeText(this@CustomersDetail, "Por favor, rellena todos los campos.", Toast.LENGTH_SHORT).show()
+        }
+        else if(nombre==nombreAntiguo && direccion==direccionAntigua && telefono==telefonoAntiguo){
+            Toast.makeText(this@CustomersDetail, "No se ha modificado ningún campo.", Toast.LENGTH_SHORT).show()
         }
         else{
             alertDialog.apply {
