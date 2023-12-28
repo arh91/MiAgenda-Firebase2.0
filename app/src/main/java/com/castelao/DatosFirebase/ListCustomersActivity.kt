@@ -20,6 +20,7 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
     private lateinit var nombreCliente: EditText
     private lateinit var ok: Button
     private lateinit var buscarCliPorNombre: Button
+    private lateinit var volverListaCli: Button
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
@@ -30,10 +31,12 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
         textViewNombre = findViewById(R.id.textView_nombreCli)
         nombreCliente = findViewById(R.id.editTextNombreCli)
         ok = findViewById(R.id.btnOkCli)
+        volverListaCli = findViewById(R.id.btnVolverListaCli)
 
         textViewNombre.visibility = View.GONE
         nombreCliente.visibility = View.GONE
         ok.visibility = View.GONE
+        volverListaCli.visibility = View.GONE
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -56,11 +59,18 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
 
         ok.setOnClickListener(){
             val nombre = nombreCliente.text.toString()
+            listarCliente(nombre)
 
             textViewNombre.visibility = View.GONE
             nombreCliente.visibility = View.GONE
             ok.visibility = View.GONE
             recyclerView.visibility = View.VISIBLE
+            volverListaCli.visibility = View.VISIBLE
+        }
+
+        volverListaCli.setOnClickListener(){
+            listarRegistrosClientes()
+            volverListaCli.visibility = View.GONE
             atras.visibility = View.VISIBLE
             buscarCliPorNombre.visibility = View.VISIBLE
         }

@@ -20,6 +20,7 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
     private lateinit var nombreProveedor: EditText
     private lateinit var ok: Button
     private lateinit var buscarProvPorNombre: Button
+    private lateinit var volverListaProv: Button
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
 
@@ -30,10 +31,12 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
         textViewNombre = findViewById(R.id.textView_nombreProv)
         nombreProveedor = findViewById(R.id.editTextNombreProv)
         ok = findViewById(R.id.btnOkProv)
+        volverListaProv = findViewById(R.id.btnVolverListaProv)
 
         textViewNombre.visibility = View.GONE
         nombreProveedor.visibility = View.GONE
         ok.visibility = View.GONE
+        volverListaProv.visibility = View.GONE
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -56,11 +59,18 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
 
         ok.setOnClickListener(){
             val nombre = nombreProveedor.text.toString()
+            listarProveedor(nombre)
 
             textViewNombre.visibility = View.GONE
             nombreProveedor.visibility = View.GONE
             ok.visibility = View.GONE
+            volverListaProv.visibility = View.VISIBLE
             recyclerView.visibility = View.VISIBLE
+        }
+
+        volverListaProv.setOnClickListener(){
+            listarRegistrosProveedores()
+            volverListaProv.visibility = View.GONE
             atras.visibility = View.VISIBLE
             buscarProvPorNombre.visibility = View.VISIBLE
         }
