@@ -22,10 +22,53 @@
         android:id="@+id/btnAtrasRegistroClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
         android:text="ATRÁS"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/findCustomerByName"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/findCustomerByName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Buscar por nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAtrasRegistroClientes" />
+
+    <TextView
+        android:id="@+id/textView_nombreCli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="275dp"
+        android:text="Introduzca un nombre de cliente:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNombreCli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView_nombreCli"
+        app:layout_constraintTop_toBottomOf="@+id/textView_nombreCli" />
+
+    <Button
+        android:id="@+id/btnOkCli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNombreCli"
+        app:layout_constraintStart_toStartOf="@+id/editTextNombreCli"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreCli" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
