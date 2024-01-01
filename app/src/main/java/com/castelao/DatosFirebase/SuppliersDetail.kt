@@ -119,6 +119,7 @@ class SuppliersDetail : AppCompatActivity() {
                 Toast.makeText(this@SuppliersDetail, "El proveedor ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
             }
             setNegativeButton("Cancelar") { _, _ ->
+                volverAListaProveedores()
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
             }
         }.create().show()
@@ -183,6 +184,7 @@ class SuppliersDetail : AppCompatActivity() {
                         }
                 }
                 setNegativeButton("Cancelar") { _, _ ->
+                    volverAListaProveedores()
                     Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
                 }
             }.create().show()

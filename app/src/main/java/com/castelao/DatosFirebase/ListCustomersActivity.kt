@@ -47,7 +47,7 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
             startActivity(toFifth)
         }
 
-        buscarCliPorNombre = findViewById(R.id.findSupplierByName)
+        buscarCliPorNombre = findViewById(R.id.findCustomerByName)
         buscarCliPorNombre.setOnClickListener(){
             recyclerView.visibility = View.GONE
             atras.visibility = View.GONE

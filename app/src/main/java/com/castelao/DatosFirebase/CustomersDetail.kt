@@ -120,6 +120,7 @@ class CustomersDetail : AppCompatActivity() {
                 Toast.makeText(this@CustomersDetail, "El cliente ha sido eliminado de la base de datos.", Toast.LENGTH_SHORT).show()
             }
             setNegativeButton("Cancelar") { _, _ ->
+                volverAListaClientes()
                 Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
             }
         }.create().show()
@@ -173,6 +174,7 @@ class CustomersDetail : AppCompatActivity() {
                         }
                 }
                 setNegativeButton("Cancelar") { _, _ ->
+                    volverAListaClientes()
                     Toast.makeText(context, "Operación cancelada", Toast.LENGTH_SHORT).show()
                 }
             }.create().show()
