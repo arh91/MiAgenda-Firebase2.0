@@ -69,6 +69,11 @@ class CustomersDetail : AppCompatActivity() {
 
 
     private fun listarDatosCliente(code: String?) {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede acceder a los datos porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
         code?.let {
             databaseReference.child(it).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {

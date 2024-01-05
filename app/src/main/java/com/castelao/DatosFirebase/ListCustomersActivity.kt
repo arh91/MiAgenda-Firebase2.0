@@ -2,6 +2,7 @@ package com.castelao.DatosFirebase
 
 import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -105,6 +106,11 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
     }
 
     private fun listarRegistrosClientes() {
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede acceder a los datos porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
         databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val dataList = mutableListOf<String>()
@@ -127,6 +133,11 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
     }
 
     private fun listarCliente(nombre: String){
+        // Si no hay conexión a Internet, informar de ello al usuario
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "No se puede acceder a los datos porque no hay conexión a Internet", Toast.LENGTH_LONG).show()
+            return
+        }
         val query = databaseReference.orderByChild("nombre").equalTo(nombre)
         query.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -209,6 +220,14 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
 
         // Muestra el Toast personalizado
         toast.show()
+    }
+
+
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        val activeNetworkInfo = connectivityManager.activeNetworkInfo
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
 
 }
