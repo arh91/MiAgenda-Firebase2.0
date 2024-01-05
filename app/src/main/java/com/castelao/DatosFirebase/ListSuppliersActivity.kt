@@ -1,8 +1,11 @@
 package com.castelao.DatosFirebase
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -61,6 +64,12 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
             val nombre = nombreProveedor.text.toString()
             listarProveedor(nombre)
 
+            obtenerNumeroProveedoresPorNombre(nombre) { numeroRegistros ->
+                if (numeroRegistros == 0) {
+                    mostrarPanelPersonalizado("No existe ningún proveedor con ese nombre en la base de datos")
+                }
+            }
+
             textViewNombre.visibility = View.GONE
             nombreProveedor.visibility = View.GONE
             ok.visibility = View.GONE
@@ -70,6 +79,11 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
 
         volverListaProv.setOnClickListener(){
             listarRegistrosProveedores()
+            obtenerNumeroProveedores { numeroRegistros ->
+                if (numeroRegistros == 0) {
+                    mostrarPanelPersonalizado("No hay proveedores en la base de datos.")
+                }
+            }
             volverListaProv.visibility = View.GONE
             atras.visibility = View.VISIBLE
             buscarProvPorNombre.visibility = View.VISIBLE
@@ -82,6 +96,12 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
 
         // Obtener datos de la base de datos y actualizar el RecyclerView
         listarRegistrosProveedores()
+
+        obtenerNumeroProveedores { numeroRegistros ->
+            if (numeroRegistros == 0) {
+                mostrarPanelPersonalizado("No hay proveedores en la base de datos.")
+            }
+        }
     }
 
     private fun listarRegistrosProveedores() {
@@ -138,4 +158,55 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
         intent.putExtra("code", code)
         startActivity(intent)
     }
+
+    fun obtenerNumeroProveedores(callback: (Int) -> Unit) {
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val numeroRegistros: Int = dataSnapshot.childrenCount.toInt()
+                callback(numeroRegistros)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                callback(-1)
+            }
+        })
+    }
+
+    fun obtenerNumeroProveedoresPorNombre(nombre: String, callback: (Int) -> Unit) {
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                var contadorRegistros = 0
+
+                for (snapshot in dataSnapshot.children) {
+                    // Verifica si el campo específico tiene el valor deseado
+                    val nombreRegistro = snapshot.child("nombre").getValue(String::class.java)
+
+                    if (nombreRegistro != null && nombreRegistro == nombre) {
+                        contadorRegistros++
+                    }
+                }
+                callback(contadorRegistros)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                callback(-1)
+            }
+        })
+    }
+
+    private fun mostrarPanelPersonalizado(mensaje: String) {
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val layout = inflater.inflate(R.layout.custom_toast_layout, findViewById(R.id.custom_toast_root))
+
+        // Crea un objeto Toast personalizado con la vista personalizada
+        val toast = Toast(applicationContext)
+        toast.setGravity(Gravity.CENTER, 0, 0)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = layout
+        layout.findViewById<TextView>(R.id.custom_toast_text).text = mensaje
+
+        // Muestra el Toast personalizado
+        toast.show()
+    }
+
 }

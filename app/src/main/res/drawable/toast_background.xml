@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp" /> <!-- Ajusta el radio según sea necesario -->
+    <solid android:color="#DAAA" /> <!-- Color de fondo del Toast -->
+</shape>
