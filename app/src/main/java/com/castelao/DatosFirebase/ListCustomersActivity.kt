@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -59,23 +60,28 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
             textViewNombre.visibility = View.VISIBLE
             nombreCliente.visibility = View.VISIBLE
             ok.visibility = View.VISIBLE
+            volverListaCli.visibility = View.VISIBLE
         }
 
         ok.setOnClickListener(){
             val nombre = nombreCliente.text.toString()
-            listarCliente(nombre)
 
-            obtenerNumeroClientesPorNombre(nombre) { numeroRegistros ->
-                if (numeroRegistros == 0) {
-                    mostrarPanelPersonalizado("No existe ningún cliente con ese nombre en la base de datos")
+            if(TextUtils.isEmpty(nombre)){
+                mostrarPanelPersonalizado("Por favor, introduzca un nombre.")
+            }else{
+                listarCliente(nombre)
+
+                obtenerNumeroClientesPorNombre(nombre) { numeroRegistros ->
+                    if (numeroRegistros == 0) {
+                        mostrarPanelPersonalizado("No existe ningún cliente con ese nombre en la base de datos")
+                    }
                 }
-            }
 
-            textViewNombre.visibility = View.GONE
-            nombreCliente.visibility = View.GONE
-            ok.visibility = View.GONE
-            recyclerView.visibility = View.VISIBLE
-            volverListaCli.visibility = View.VISIBLE
+                textViewNombre.visibility = View.GONE
+                nombreCliente.visibility = View.GONE
+                ok.visibility = View.GONE
+                recyclerView.visibility = View.VISIBLE
+            }
         }
 
         volverListaCli.setOnClickListener(){
@@ -85,7 +91,11 @@ class ListCustomersActivity : AppCompatActivity(), CustomersAdapter.OnItemClickL
                     mostrarPanelPersonalizado("No hay clientes en la base de datos.")
                 }
             }
+            textViewNombre.visibility = View.GONE
+            nombreCliente.visibility = View.GONE
+            ok.visibility = View.GONE
             volverListaCli.visibility = View.GONE
+            recyclerView.visibility = View.VISIBLE
             atras.visibility = View.VISIBLE
             buscarCliPorNombre.visibility = View.VISIBLE
         }

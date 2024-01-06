@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -59,23 +60,28 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
             textViewNombre.visibility = View.VISIBLE
             nombreProveedor.visibility = View.VISIBLE
             ok.visibility = View.VISIBLE
+            volverListaProv.visibility = View.VISIBLE
         }
 
         ok.setOnClickListener(){
             val nombre = nombreProveedor.text.toString()
-            listarProveedor(nombre)
 
-            obtenerNumeroProveedoresPorNombre(nombre) { numeroRegistros ->
-                if (numeroRegistros == 0) {
-                    mostrarPanelPersonalizado("No existe ningún proveedor con ese nombre en la base de datos")
+            if(TextUtils.isEmpty(nombre)){
+                mostrarPanelPersonalizado("Por favor, introduzca un nombre.")
+            }else{
+                listarProveedor(nombre)
+
+                obtenerNumeroProveedoresPorNombre(nombre) { numeroRegistros ->
+                    if (numeroRegistros == 0) {
+                        mostrarPanelPersonalizado("No existe ningún proveedor con ese nombre en la base de datos")
+                    }
                 }
-            }
 
-            textViewNombre.visibility = View.GONE
-            nombreProveedor.visibility = View.GONE
-            ok.visibility = View.GONE
-            volverListaProv.visibility = View.VISIBLE
-            recyclerView.visibility = View.VISIBLE
+                textViewNombre.visibility = View.GONE
+                nombreProveedor.visibility = View.GONE
+                ok.visibility = View.GONE
+                recyclerView.visibility = View.VISIBLE
+            }
         }
 
         volverListaProv.setOnClickListener(){
@@ -85,7 +91,11 @@ class ListSuppliersActivity : AppCompatActivity(), SuppliersAdapter.OnItemClickL
                     mostrarPanelPersonalizado("No hay proveedores en la base de datos.")
                 }
             }
+            textViewNombre.visibility = View.GONE
+            nombreProveedor.visibility = View.GONE
+            ok.visibility = View.GONE
             volverListaProv.visibility = View.GONE
+            recyclerView.visibility = View.VISIBLE
             atras.visibility = View.VISIBLE
             buscarProvPorNombre.visibility = View.VISIBLE
         }
