@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuppliersDetail">
+
+
+    <TextView
+        android:id="@+id/textView_codigo_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="139dp"
+        android:text="Código:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_nombre_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="11dp"
+        android:text="Nombre:"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_codigo_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_nombre_prov" />
+
+    <TextView
+        android:id="@+id/textView_direccion_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:text="Dirección:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_direccion_prov"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_telefono_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Teléfono:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_telefono_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_telefono_prov" />
+
+    <EditText
+        android:id="@+id/editText_codigo_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_codigo_prov"
+        app:layout_constraintStart_toEndOf="@+id/textView_codigo_prov" />
+
+    <EditText
+        android:id="@+id/editText_nombre_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_nombre_prov"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_direccion_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView_direccion_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_codigo_prov" />
+
+    <EditText
+        android:id="@+id/editText_telefono_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nombre_prov" />
+
+    <Button
+        android:id="@+id/btn_Eliminar_Prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion_prov" />
+
+    <Button
+        android:id="@+id/btn_Modificar_Prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="55dp"
+        android:text="Modificar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_telefono_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion_prov" />
+
+    <Button
+        android:id="@+id/btn_Atras_Lista_Prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:text="Atrás"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_telefono_prov"
+        app:layout_constraintStart_toStartOf="@+id/editText_telefono_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_telefono_prov" />
+
+    <TextView
+        android:id="@+id/textView_prov"
+        android:layout_width="133dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="64dp"
+        android:text="PROVEEDOR:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_nombre_prov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
