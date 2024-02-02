@@ -8,29 +8,38 @@
 
     <Button
         android:id="@+id/btnProveedores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1002dp"
+        android:layout_marginBottom="158dp"
         android:text="Proveedores"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btnClientes"
-        app:layout_constraintStart_toStartOf="@+id/btnClientes" />
+        app:layout_constraintEnd_toEndOf="@+id/btnClientes"
+        app:layout_constraintStart_toStartOf="@+id/btnClientes"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="61dp"
+        android:layout_width="301dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="136dp"
         android:text="Clientes"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
-        app:layout_constraintStart_toStartOf="@+id/btnAtrasThird" />
+        app:layout_constraintEnd_toEndOf="@+id/btnAtrasThird"
+        app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
 
     <Button
         android:id="@+id/btnAtrasThird"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
+        android:layout_width="301dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="282dp"
+        android:layout_marginBottom="117dp"
         android:text="Atrás"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnClientes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
