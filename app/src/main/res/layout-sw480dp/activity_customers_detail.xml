@@ -13,6 +13,7 @@
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="35dp"
         android:text="Código:"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editText_nombre_cli"
         app:layout_constraintEnd_toStartOf="@+id/editText_codigo_cli" />
 
@@ -20,29 +21,32 @@
         android:id="@+id/textView_nombre_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="243dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginBottom="33dp"
         android:text="Nombre:"
-        app:layout_constraintBottom_toTopOf="@+id/editText_direccion_cli"
-        app:layout_constraintEnd_toStartOf="@+id/editText_nombre_cli" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText_nombre_cli"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_direccion_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="17dp"
         android:text="Dirección:"
-        app:layout_constraintBottom_toTopOf="@+id/editText_telefono_cli"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_direccion_cli"
+        app:layout_constraintEnd_toStartOf="@+id/editText_direccion_cli" />
 
     <TextView
         android:id="@+id/textView_telefono_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
         android:text="Teléfono:"
+        android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_telefono_cli"
-        app:layout_constraintEnd_toEndOf="@+id/textView_direccion_cli" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText_codigo_cli"
@@ -68,23 +72,24 @@
         android:id="@+id/editText_direccion_cli"
         android:layout_width="0dp"
         android:layout_height="41dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="71dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_direccion_cli"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_telefono_cli"
         app:layout_constraintEnd_toEndOf="@+id/editText_telefono_cli"
-        app:layout_constraintStart_toStartOf="@+id/editText_telefono_cli" />
+        app:layout_constraintStart_toStartOf="@+id/editText_telefono_cli"
+        app:layout_constraintTop_toTopOf="@+id/editText_nombre_cli" />
 
     <EditText
         android:id="@+id/editText_telefono_cli"
         android:layout_width="0dp"
         android:layout_height="41dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView_telefono_cli"
+        app:layout_constraintStart_toEndOf="@+id/textView_telefono_cli"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -121,9 +126,9 @@
         android:layout_width="133dp"
         android:layout_height="29dp"
         android:layout_marginTop="65dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="69dp"
         android:text="CLIENTE:"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText_codigo_cli"
         app:layout_constraintEnd_toEndOf="parent"
