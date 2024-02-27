@@ -8,93 +8,76 @@
 
     <EditText
         android:id="@+id/edtCodigoCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Código"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="161dp" />
 
     <EditText
         android:id="@+id/edtNombreCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edtCodigoCliente"
-        app:layout_constraintTop_toBottomOf="@+id/edtCodigoCliente" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="281dp" />
 
     <EditText
         android:id="@+id/edtDireccionCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Dirección"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edtNombreCliente"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreCliente" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="401dp" />
 
     <EditText
         android:id="@+id/edtTelefonoCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Teléfono"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edtDireccionCliente"
-        app:layout_constraintTop_toBottomOf="@+id/edtDireccionCliente" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="521dp" />
 
     <Button
         android:id="@+id/btnEnviarCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="124dp"
+        android:layout_width="141dp"
+        android:layout_height="66dp"
         android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="766dp" />
 
     <Button
         android:id="@+id/btnAtrasFifth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="124dp"
+        android:layout_width="141dp"
+        android:layout_height="66dp"
         android:text="Atrás"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnListaClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
-        android:text="LISTADO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="408dp"
+        tools:layout_editor_absoluteY="766dp" />
 
     <TextView
         android:id="@+id/tituloFifth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="27dp"
         android:text="NUEVO CLIENTE"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/edtCodigoCliente"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="29dp" />
 
-
+    <Button
+        android:id="@+id/btnListaClientes"
+        android:layout_width="141dp"
+        android:layout_height="66dp"
+        android:text="LISTADO"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="890dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
