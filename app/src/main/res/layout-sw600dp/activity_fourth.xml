@@ -10,74 +10,95 @@
         android:id="@+id/edtCodigoProveedor"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_marginTop="91dp"
         android:ems="10"
         android:hint="Código"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloFourth" />
 
     <EditText
         android:id="@+id/edtNombreProveedor"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="120dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/edtDireccionProveedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtCodigoProveedor" />
 
     <EditText
         android:id="@+id/edtDireccionProveedor"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_marginTop="401dp"
         android:ems="10"
         android:hint="Dirección"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="401dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtTelefonoProveedor"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:hint="Teléfono"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="521dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccionProveedor" />
 
     <Button
         android:id="@+id/btnEnviarProveedor"
-        android:layout_width="141dp"
-        android:layout_height="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
         android:text="Registrar"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="766dp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAtrasFourth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnAtrasFourth" />
 
     <Button
         android:id="@+id/btnAtrasFourth"
-        android:layout_width="141dp"
+        android:layout_width="wrap_content"
         android:layout_height="66dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="58dp"
         android:text="Atrás"
-        tools:layout_editor_absoluteX="408dp"
-        tools:layout_editor_absoluteY="766dp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnListaProveedores"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tituloFourth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
         android:text="NUEVO PROVEEDOR"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="29dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnListaProveedores"
-        android:layout_width="141dp"
+        android:layout_width="wrap_content"
         android:layout_height="66dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="68dp"
         android:text="LISTADO"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="890dp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFourth" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
