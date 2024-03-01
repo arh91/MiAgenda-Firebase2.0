@@ -8,40 +8,40 @@
 
     <Button
         android:id="@+id/btnRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="106dp"
+        android:layout_width="241dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
         android:text="Registro"
-        android:textSize="40sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSalir"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <Button
         android:id="@+id/btnSalir"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginBottom="280dp"
+        android:layout_width="249dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="107dp"
         android:text="Salir"
-        android:textSize="40sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnRegistro"
-        app:layout_constraintStart_toStartOf="@+id/btnRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistro" />
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="139dp"
-        android:layout_marginEnd="304dp"
-        android:layout_marginBottom="935dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="683dp"
         android:text="BIENVENIDO!"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,135 +10,145 @@
         android:id="@+id/textView_codigo_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginStart="64dp"
         android:text="Código:"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/editText_codigo_cli" />
 
     <TextView
         android:id="@+id/textView_nombre_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="102dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="39dp"
         android:text="Nombre:"
         android:textSize="40sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText_direccion_cli"
+        app:layout_constraintEnd_toStartOf="@+id/editText_nombre_cli"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_codigo_cli" />
+        app:layout_constraintTop_toTopOf="@+id/editText_nombre_cli" />
 
     <TextView
         android:id="@+id/textView_direccion_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="71dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="538dp"
+        android:layout_marginEnd="21dp"
         android:text="Dirección:"
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/editText_direccion_cli"
-        app:layout_constraintTop_toBottomOf="@+id/textView_nombre_cli" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_telefono_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="31dp"
         android:text="Teléfono:"
         android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText_telefono_cli"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_direccion_cli" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion_cli" />
 
     <EditText
         android:id="@+id/editText_codigo_cli"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="95dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_codigo_cli"
-        app:layout_constraintEnd_toEndOf="@+id/editText_nombre_cli"
-        app:layout_constraintStart_toStartOf="@+id/editText_nombre_cli" />
+        app:layout_constraintBottom_toTopOf="@+id/textView_nombre_cli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_codigo_cli"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cli" />
 
     <EditText
         android:id="@+id/editText_nombre_cli"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="245dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_nombre_cli"
-        app:layout_constraintEnd_toEndOf="@+id/editText_direccion_cli" />
+        app:layout_constraintBottom_toTopOf="@+id/editText_telefono_cli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_nombre_cli"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cli" />
 
     <EditText
         android:id="@+id/editText_direccion_cli"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:layout_marginEnd="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_direccion_cli"
-        app:layout_constraintEnd_toEndOf="@+id/editText_telefono_cli"
-        app:layout_constraintStart_toStartOf="@+id/editText_telefono_cli" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_direccion_cli" />
 
     <EditText
         android:id="@+id/editText_telefono_cli"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
-        android:layout_marginStart="81dp"
+        android:layout_marginEnd="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_telefono_cli"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_telefono_cli" />
 
     <Button
         android:id="@+id/btn_Eliminar_cli"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginBottom="302dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginBottom="233dp"
         android:text="Eliminar"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_Modificar_cli"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="75dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
         android:text="Modificar"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Atras_Lista_Cli"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Eliminar_cli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_Eliminar_cli" />
 
     <Button
         android:id="@+id/btn_Atras_Lista_Cli"
         android:layout_width="220dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginBottom="93dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="41dp"
         android:text="Atrás"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Eliminar_cli" />
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_Eliminar_cli"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Modificar_cli" />
 
     <TextView
         android:id="@+id/textView_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="175dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="256dp"
         android:text="CLIENTE:"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText_direccion_cli"
-        app:layout_constraintStart_toEndOf="@+id/textView_codigo_cli"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
