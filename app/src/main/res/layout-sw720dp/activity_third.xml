@@ -8,25 +8,25 @@
 
     <Button
         android:id="@+id/btnProveedores"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="373dp"
+        android:layout_height="120dp"
         android:layout_marginTop="1002dp"
+        android:layout_marginEnd="233dp"
         android:layout_marginBottom="158dp"
         android:text="Proveedores"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/btnClientes"
-        app:layout_constraintEnd_toEndOf="@+id/btnClientes"
-        app:layout_constraintStart_toStartOf="@+id/btnClientes"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnClientes"
         android:layout_width="301dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="136dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="135dp"
         android:text="Clientes"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
         app:layout_constraintEnd_toEndOf="@+id/btnAtrasThird"
         app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
@@ -34,11 +34,11 @@
     <Button
         android:id="@+id/btnAtrasThird"
         android:layout_width="301dp"
-        android:layout_height="0dp"
+        android:layout_height="120dp"
         android:layout_marginEnd="282dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginBottom="168dp"
         android:text="Atrás"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnClientes" />
