@@ -14,7 +14,7 @@
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="35dp"
         android:text="Código:"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/editText_nombre_prov"
         app:layout_constraintEnd_toStartOf="@+id/editText_codigo_prov" />
 
@@ -25,7 +25,7 @@
         android:layout_marginTop="251dp"
         android:layout_marginEnd="17dp"
         android:text="Nombre:"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/editText_nombre_prov"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:text="Dirección:"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_direccion_prov"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Teléfono:"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_telefono_prov"
         app:layout_constraintEnd_toEndOf="@+id/textView_direccion_prov" />
 
@@ -98,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:text="Eliminar"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Modificar_Prov"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_Modificar_Prov" />
@@ -109,6 +110,7 @@
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="50dp"
         android:text="Modificar"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_Atras_Lista_Prov"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -118,6 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="61dp"
         android:text="Atrás"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_Modificar_Prov" />
 

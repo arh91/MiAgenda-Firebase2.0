@@ -14,6 +14,7 @@
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="31dp"
         android:text="Código:"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_nombre_prov"
         app:layout_constraintEnd_toStartOf="@+id/editText_codigo_prov" />
 
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:text="Nombre:"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/editText_nombre_prov"
         app:layout_constraintStart_toStartOf="@+id/textView_codigo_prov" />
 
@@ -33,6 +35,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="11dp"
         android:text="Dirección:"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/editText_direccion_prov"
         app:layout_constraintEnd_toStartOf="@+id/editText_direccion_prov" />
 
@@ -43,6 +46,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="11dp"
         android:text="Teléfono:"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/editText_telefono_prov"
         app:layout_constraintEnd_toStartOf="@+id/editText_telefono_prov" />
 
@@ -117,12 +121,12 @@
 
     <TextView
         android:id="@+id/textView_prov"
-        android:layout_width="133dp"
-        android:layout_height="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:layout_marginBottom="64dp"
         android:text="PROVEEDOR:"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editText_codigo_prov"
         app:layout_constraintEnd_toEndOf="parent"

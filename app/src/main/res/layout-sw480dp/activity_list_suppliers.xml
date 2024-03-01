@@ -15,17 +15,20 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnAtrasRegistroProveedores"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="22dp"
         android:layout_marginBottom="33dp"
         android:text="ATRÁS"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/findSupplierByName"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,11 +36,12 @@
 
     <Button
         android:id="@+id/findSupplierByName"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="33dp"
         android:text="Buscar por nombre"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAtrasRegistroProveedores"
@@ -45,22 +49,24 @@
 
     <TextView
         android:id="@+id/textView_nombreProv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="322dp"
+        android:layout_height="51dp"
         android:layout_marginTop="442dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="209dp"
         android:text="Introduzca un nombre de proveedor:"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnAtrasRegistroProveedores"
         app:layout_constraintEnd_toEndOf="@+id/editTextNombreProv"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextNombreProv"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextNombreProv"
-        android:layout_width="317dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="325dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="170dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -75,6 +81,7 @@
         android:layout_marginTop="571dp"
         android:layout_marginBottom="80dp"
         android:text="OK"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/findSupplierByName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +95,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="365dp"
         android:text="Volver"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_nombreProv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

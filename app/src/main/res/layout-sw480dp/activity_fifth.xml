@@ -64,11 +64,14 @@
         android:id="@+id/btnEnviarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="36dp"
         android:text="Registrar"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/btnListaClientes"
-        app:layout_constraintEnd_toStartOf="@+id/btnListaClientes" />
+        app:layout_constraintEnd_toStartOf="@+id/btnListaClientes"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAtrasFifth"
@@ -77,6 +80,7 @@
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="38dp"
         android:text="Atrás"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/btnListaClientes"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -96,9 +100,12 @@
         android:id="@+id/btnListaClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="38dp"
         android:text="LISTADO"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFifth" />
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFifth"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

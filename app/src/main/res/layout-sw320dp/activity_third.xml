@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:text="Proveedores"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/btnClientes"
         app:layout_constraintStart_toStartOf="@+id/btnClientes" />
 
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="61dp"
         android:text="Clientes"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
         app:layout_constraintStart_toStartOf="@+id/btnAtrasThird" />
 
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="41dp"
         android:text="Atrás"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
