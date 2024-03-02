@@ -10,31 +10,20 @@
         android:id="@+id/btnRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:text="Registro"
-        app:layout_constraintBottom_toBottomOf="@+id/btnSalir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnSalir" />
+        android:text="Registro" />
 
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
-        android:text="Salir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titulo" />
+        android:text="Salir" />
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="175dp"
         android:layout_height="30dp"
-        android:layout_marginTop="120dp"
         android:text="BIENVENIDO!"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

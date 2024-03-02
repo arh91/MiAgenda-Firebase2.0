@@ -33,13 +33,13 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-hdpi/activity_third.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_customers_detail.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_fifth.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_fourth.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_fourth.xml" value="0.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_list_customers.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_list_suppliers.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_main.xml" value="1.0572687224669604" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_second.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_suppliers_detail.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_third.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_third.xml" value="0.152" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-large/activity_customers_detail.xml" value="0.18169398907103826" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-ldpi/activity_customers_detail.xml" value="1.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-ldpi/activity_fifth.xml" value="1.2" />
@@ -58,18 +58,19 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_main.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_second.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_suppliers_detail.xml" value="0.264" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_third.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_third.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/custom_toast_layout.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/list_item_customers.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/list_item_suppliers.xml" value="0.25" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_customers_detail.xml" value="0.264" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_customers_detail.xml" value="0.536" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_fifth.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_fourth.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_list_customers.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_list_suppliers.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_main.xml" value="0.6" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_second.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_suppliers_detail.xml" value="0.6" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_third.xml" value="0.5277777777777778" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/activity_third.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/custom_toast_layout.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/list_item_customers.xml" value="0.6" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw480dp/list_item_suppliers.xml" value="0.6" />
@@ -84,15 +85,15 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw600dp/activity_third.xml" value="0.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw600dp/custom_toast_layout.xml" value="0.46875" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw600dp/list_item_customers.xml" value="0.3854166666666667" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_customers_detail.xml" value="0.4" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_fifth.xml" value="0.375" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_customers_detail.xml" value="0.12" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_fifth.xml" value="0.12" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_fourth.xml" value="0.12" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_list_customers.xml" value="0.18613387978142076" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_list_suppliers.xml" value="0.264" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_main.xml" value="0.125" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_list_customers.xml" value="0.128" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_list_suppliers.xml" value="0.136" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_second.xml" value="0.18169398907103826" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_suppliers_detail.xml" value="0.18613387978142076" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_third.xml" value="0.16" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_suppliers_detail.xml" value="0.11200000000000002" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw720dp/activity_third.xml" value="0.12" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-xhdpi/activity_customers_detail.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-xhdpi/activity_main.xml" value="0.375" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-xhdpi/activity_third.xml" value="0.375" />
@@ -108,7 +109,7 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_fourth.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_list_customers.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_list_suppliers.xml" value="0.176" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_main.xml" value="1.0572687224669604" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_second.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_suppliers_detail.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout/activity_third.xml" value="0.25" />

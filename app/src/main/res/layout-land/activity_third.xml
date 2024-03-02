@@ -8,31 +8,47 @@
 
     <Button
         android:id="@+id/btnProveedores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="126dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginBottom="96dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
         android:text="Proveedores"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnClientes"
+        app:layout_constraintEnd_toEndOf="@+id/btnClientes"
+        app:layout_constraintStart_toStartOf="@+id/btnClientes"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="87dp"
+        android:layout_width="336dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="436dp"
+        android:layout_marginBottom="91dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
         android:text="Clientes"
-        app:layout_constraintBottom_toBottomOf="@+id/btnProveedores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnProveedores" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
 
     <Button
         android:id="@+id/btnAtrasThird"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="293dp"
-        android:layout_marginBottom="108dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="164dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/btnClientes"
+        app:layout_constraintStart_toStartOf="@+id/btnClientes"
+        app:layout_constraintTop_toBottomOf="@+id/btnClientes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
