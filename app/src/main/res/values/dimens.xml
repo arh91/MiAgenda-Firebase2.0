@@ -8,4 +8,16 @@
     <dimen name="textfield_height_ratio">0.109</dimen> <!-- 10,9% del ancho de la pantalla -->
     <dimen name="button_width_ratio">0.19</dimen> <!-- 19% de longitud de la pantalla -->
     <dimen name="button_height_ratio">0.145</dimen> <!-- 14,5% del ancho de la pantalla -->
+    <dimen name="margin_left_titulo_ratio">0.345</dimen>
+    <dimen name ="margin_top_titulo_ratio">0.068</dimen>
+    <dimen name ="margin_left_btnRegistro_ratio">0.169</dimen>
+    <dimen name="margin_bottom_btnRegistro_ratio">0.209</dimen>
+    <dimen name="margin_right_btnSalir_ratio">0.103</dimen>
+    <dimen name="margin_bottom_btnSalir_ratio">0.209</dimen>
+    <dimen name="margin_left_btnProveedores_ratio">0.405</dimen>
+    <dimen name="margin_top_btnProveedores_ratio">0.228</dimen>
+    <dimen name="margin_left_btnClientes_ratio">0.405</dimen>
+    <dimen name="margin_top_btnClientes_ratio">0.072</dimen>
+    <dimen name="margin_left_btnAtrasThird_ratio">0.405</dimen>
+    <dimen name="margin_bottom_btnAtrasThird_ratio">0.184</dimen>
 </resources>
