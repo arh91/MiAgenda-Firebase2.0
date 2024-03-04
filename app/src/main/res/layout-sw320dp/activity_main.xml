@@ -8,28 +8,25 @@
 
     <Button
         android:id="@+id/btnRegistro"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="210dp"
-        android:layout_marginEnd="248dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginBottom="81dp"
         android:text="Registro"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnSalir"
-        app:layout_constraintEnd_toStartOf="@+id/btnSalir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnSalir" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSalir"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="196dp"
-        android:layout_marginBottom="71dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="83dp"
         android:text="Salir"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistro" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/titulo"
