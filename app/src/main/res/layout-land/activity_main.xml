@@ -6,24 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnRegistro"
+    <TextView
+        android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registro" />
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="174dp"
+        android:text="BIENVENIDO"
+        android:textSize="48sp"
+        android:maxWidth="@dimen/title_app_width_ratio"
+        android:maxHeight="@dimen/title_app_height_ratio"
+        android:minWidth="@dimen/title_app_width_ratio"
+        android:minHeight="@dimen/title_app_height_ratio"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginBottom="86dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
+        android:text="Registro"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSalir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <Button
         android:id="@+id/btnSalir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salir" />
-
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="175dp"
-        android:layout_height="30dp"
-        android:text="BIENVENIDO!"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="92dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
+        android:text="Salir"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistro"
+        app:layout_constraintTop_toTopOf="@+id/btnRegistro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

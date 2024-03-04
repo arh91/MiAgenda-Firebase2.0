@@ -6,100 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".FourthActivity">
 
-    <EditText
-        android:id="@+id/edtCodigoProveedor"
+    <TextView
+        android:id="@+id/tituloFourth"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="93dp"
-        android:ems="10"
-        android:hint="Código"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/edtNombreProveedor"
+        android:layout_height="0dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="18dp"
+        android:text="NUEVO PROVEEDOR"
+        android:textSize="34sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/edtCodigoProveedor"
+        app:layout_constraintEnd_toEndOf="@+id/btnEnviarProveedor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloFourth" />
-
-    <EditText
-        android:id="@+id/edtNombreProveedor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="125dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tituloFourth"
-        app:layout_constraintTop_toBottomOf="@+id/tituloFourth" />
-
-    <EditText
-        android:id="@+id/edtDireccionProveedor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Dirección"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/edtCodigoProveedor"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtTelefonoProveedor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Teléfono"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/edtNombreProveedor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnEnviarProveedor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="38dp"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="41dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
         android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtDireccionProveedor"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnAtrasFourth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="38dp"
-        android:text="Atrás"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasFourth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/edtTelefonoProveedor" />
-
-    <TextView
-        android:id="@+id/tituloFourth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:text="NUEVO PROVEEDOR"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtNombreProveedor"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btnAtrasFourth"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="36dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
+        android:text="Atrás"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/btnListaProveedores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtDireccionProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarProveedor" />
+
+    <Button
         android:id="@+id/btnListaProveedores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="38dp"
-        android:text="LISTADO"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="66dp"
+        android:maxWidth="@dimen/button_width_ratio"
+        android:maxHeight="@dimen/button_height_ratio"
+        android:minWidth="@dimen/button_width_ratio"
+        android:minHeight="@dimen/button_height_ratio"
+        android:text="Listado"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edtDireccionProveedor" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtTelefonoProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtrasFourth" />
+
+    <EditText
+        android:id="@+id/edtCodigoProveedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombreProveedor"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombreProveedor"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/tituloFourth" />
+
+    <EditText
+        android:id="@+id/edtNombreProveedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/edtDireccionProveedor"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnviarProveedor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigoProveedor" />
+
+    <EditText
+        android:id="@+id/edtDireccionProveedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/edtTelefonoProveedor"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFourth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreProveedor" />
+
+    <EditText
+        android:id="@+id/edtTelefonoProveedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="92dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnListaProveedores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccionProveedor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
