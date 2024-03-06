@@ -7,53 +7,33 @@
     tools:context=".ThirdActivity">
 
     <Button
-        android:id="@+id/btnProveedores"
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:maxWidth="@dimen/button_width_ratio"
-        android:maxHeight="@dimen/button_height_ratio"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
-        android:layout_marginTop="@dimen/margin_top_titulo_ratio"
-        android:layout_marginStart="@dimen/margin_left_titulo_ratio"
+        android:id="@+id/btnProveedoresLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
         android:text="Proveedores"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintBottom_toTopOf="@+id/btnClientes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnClientesLand"
+        app:layout_constraintStart_toStartOf="@+id/btnClientesLand" />
 
     <Button
-        android:id="@+id/btnClientes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/margin_top_btnClientes_ratio"
-        android:layout_marginStart="@dimen/margin_left_btnClientes_ratio"
-        android:maxWidth="@dimen/button_width_ratio"
-        android:maxHeight="@dimen/button_height_ratio"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
+        android:id="@+id/btnClientesLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
         android:text="Clientes"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintBottom_toTopOf="@+id/btnAtrasThird"
-        app:layout_constraintEnd_toEndOf="@+id/btnAtrasThird"
-        app:layout_constraintStart_toStartOf="@+id/btnProveedores"
-        app:layout_constraintTop_toBottomOf="@+id/btnProveedores" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasThirdLand"
+        app:layout_constraintStart_toStartOf="@+id/btnAtrasThirdLand" />
 
     <Button
-        android:id="@+id/btnAtrasThird"
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:maxWidth="@dimen/button_width_ratio"
-        android:maxHeight="@dimen/button_height_ratio"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
-        android:layout_marginBottom="@dimen/margin_bottom_btnAtrasThird_ratio"
-        android:layout_marginStart="@dimen/margin_left_btnAtrasThird_ratio"
+        android:id="@+id/btnAtrasThirdLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
         android:text="Atrás"
-        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnClientes" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

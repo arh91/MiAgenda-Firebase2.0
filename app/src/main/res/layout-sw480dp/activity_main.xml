@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnRegistroLand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="297dp"
@@ -25,8 +25,8 @@
         android:layout_marginTop="50dp"
         android:text="Salir"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/btnRegistro"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistro" />
+        app:layout_constraintStart_toStartOf="@+id/btnRegistroLand"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistroLand" />
 
     <TextView
         android:id="@+id/titulo"

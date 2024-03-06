@@ -6,8 +6,8 @@
     <dimen name="label_height_ratio">0.06</dimen> <!-- 6% del ancho de la pantalla -->
     <dimen name="textfield_width_ratio">0.505</dimen> <!-- 50,5% de longitud de la pantalla -->
     <dimen name="textfield_height_ratio">0.109</dimen> <!-- 10,9% del ancho de la pantalla -->
-    <dimen name="button_width_ratio">0.19</dimen> <!-- 19% de longitud de la pantalla -->
-    <dimen name="button_height_ratio">0.145</dimen> <!-- 14,5% del ancho de la pantalla -->
+    <dimen name="button_width_ratio">190</dimen> <!-- 19% de longitud de la pantalla -->
+    <dimen name="button_height_ratio">145</dimen> <!-- 14,5% del ancho de la pantalla -->
     <dimen name="margin_left_titulo_ratio">0.345</dimen>
     <dimen name ="margin_top_titulo_ratio">0.068</dimen>
     <dimen name ="margin_left_btnRegistro_ratio">0.169</dimen>

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnRegistroLand"
         android:layout_width="150dp"
         android:layout_height="0dp"
         android:layout_marginBottom="71dp"
@@ -27,8 +27,8 @@
         android:text="Salir"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnRegistro"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistro" />
+        app:layout_constraintStart_toStartOf="@+id/btnRegistroLand"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistroLand" />
 
     <TextView
         android:id="@+id/titulo"
@@ -39,7 +39,7 @@
         android:text="BIENVENIDO!"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistro"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistroLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -36,7 +36,7 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_fourth.xml" value="0.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_list_customers.xml" value="0.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_list_suppliers.xml" value="0.2" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_second.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_suppliers_detail.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-land/activity_third.xml" value="1.0572687224669604" />
@@ -58,7 +58,7 @@
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_second.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_suppliers_detail.xml" value="0.264" />
-        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_third.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/activity_third.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/custom_toast_layout.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/list_item_customers.xml" value="0.25" />
         <entry key="..\:/Users/alvar/Desktop/PROGRAMACION/Android/MiAgenda-Firebase3.0/app/src/main/res/layout-sw320dp/list_item_suppliers.xml" value="0.25" />
@@ -117,7 +117,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
