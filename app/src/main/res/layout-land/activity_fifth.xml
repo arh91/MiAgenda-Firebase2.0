@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FifthActivity">
+
+    <TextView
+        android:id="@+id/tituloFifthLand"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="289dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="34dp"
+        android:text="NUEVO CLIENTE"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtTelefonoClienteLand"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFifthLand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnviarClienteLand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="41dp"
+        android:text="Registrar"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasFifthLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtCodigoClienteLand"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAtrasFifthLand"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="36dp"
+        android:text="Atrás"
+        app:layout_constraintBottom_toTopOf="@+id/btnListaClientesLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtDireccionClienteLand"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarClienteLand" />
+
+    <Button
+        android:id="@+id/btnListaClientesLand"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="66dp"
+        android:text="Listado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtTelefonoClienteLand"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtrasFifthLand" />
+
+    <EditText
+        android:id="@+id/edtCodigoClienteLand"
+        android:layout_width="400dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Código"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombreClienteLand"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnviarClienteLand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNombreClienteLand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/edtDireccionClienteLand"
+        app:layout_constraintEnd_toEndOf="@+id/edtCodigoClienteLand"
+        app:layout_constraintStart_toStartOf="@+id/edtCodigoClienteLand"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigoClienteLand" />
+
+    <EditText
+        android:id="@+id/edtDireccionClienteLand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Dirección"
+        app:layout_constraintBottom_toTopOf="@+id/edtTelefonoClienteLand"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFifthLand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreClienteLand" />
+
+    <EditText
+        android:id="@+id/edtTelefonoClienteLand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Teléfono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnListaClientesLand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccionClienteLand" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

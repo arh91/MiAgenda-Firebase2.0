@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuppliersDetail">
+
+    <TextView
+        android:id="@+id/textView_prov"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="18dp"
+        android:text="PROVEEDOR"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_codigo_prov"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Eliminar_prov"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Eliminar_prov"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="59dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_codigo_prov"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Modificar_prov"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="41dp"
+        android:text="Modificar"
+        app:layout_constraintBottom_toTopOf="@+id/textView_telefono_prov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_direccion_prov"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Eliminar_prov" />
+
+    <Button
+        android:id="@+id/btn_Atras_Lista_Prov"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="59dp"
+        android:text="Atrás"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_telefono_prov"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Modificar_prov" />
+
+    <EditText
+        android:id="@+id/editText_codigo_prov"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText_nombre_prov"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Eliminar_prov"
+        app:layout_constraintStart_toEndOf="@+id/textView_codigo_prov"
+        app:layout_constraintTop_toBottomOf="@+id/textView_prov" />
+
+    <EditText
+        android:id="@+id/editText_nombre_prov"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText_direccion_prov"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_nombre_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_codigo_prov" />
+
+    <EditText
+        android:id="@+id/editText_direccion_prov"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText_telefono_prov"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Modificar_prov"
+        app:layout_constraintStart_toEndOf="@+id/textView_direccion_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nombre_prov" />
+
+    <EditText
+        android:id="@+id/editText_telefono_prov"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="92dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Atras_Lista_Prov"
+        app:layout_constraintStart_toEndOf="@+id/textView_telefono_prov"
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion_prov" />
+
+    <TextView
+        android:id="@+id/textView_codigo_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="3dp"
+        android:text="Código:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_codigo_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_codigo_prov"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_nombre_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="2dp"
+        android:text="Nombre:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_nombre_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_nombre_prov"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_direccion_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="3dp"
+        android:text="Dirección:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_direccion_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_direccion_prov"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_telefono_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="2dp"
+        android:text="Teléfono:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_telefono_prov"
+        app:layout_constraintEnd_toStartOf="@+id/editText_telefono_prov"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
