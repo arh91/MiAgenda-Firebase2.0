@@ -14,33 +14,33 @@
         android:textSize="48sp"
         android:layout_marginTop="@dimen/margin_top_titulo_ratio"
         android:layout_marginStart="@dimen/margin_left_titulo_ratio"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistroLand"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnRegistroLand"
+        android:id="@+id/btnRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_btnRegistro_ratio"
         android:layout_marginStart="@dimen/margin_left_btnRegistro_ratio"
         android:text="Registro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSalirLand"
+        app:layout_constraintEnd_toStartOf="@+id/btnSalir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloLand" />
 
     <Button
-        android:id="@+id/btnSalirLand"
+        android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_btnSalir_ratio"
         android:layout_marginEnd="@dimen/margin_right_btnSalir_ratio"
         android:text="Salir"
-        app:layout_constraintBottom_toBottomOf="@+id/btnRegistroLand"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegistroLand"
-        app:layout_constraintTop_toTopOf="@+id/btnRegistroLand" />
+        app:layout_constraintStart_toEndOf="@+id/btnRegistro"
+        app:layout_constraintTop_toTopOf="@+id/btnRegistro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

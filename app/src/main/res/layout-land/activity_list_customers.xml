@@ -8,49 +8,68 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="891dp"
-        android:layout_height="411dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnFindCustomerByName"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="89dp"
         android:text="Buscar por nombre"
-        tools:layout_editor_absoluteX="661dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNombreCli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnAtrasRegistroClientes"
-        android:layout_width="170dp"
-        android:layout_height="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="29dp"
         android:text="Atrás"
-        tools:layout_editor_absoluteX="661dp"
-        tools:layout_editor_absoluteY="262dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnOkCli"
+        app:layout_constraintEnd_toEndOf="@+id/btnFindCustomerByName"
+        app:layout_constraintStart_toEndOf="@+id/editTextNombreCli"
+        app:layout_constraintTop_toTopOf="@+id/btnOkCli" />
 
     <Button
         android:id="@+id/btnOkCli"
         android:layout_width="170dp"
         android:layout_height="60dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginBottom="89dp"
         android:text="Ok"
-        tools:layout_editor_absoluteX="292dp"
-        tools:layout_editor_absoluteY="262dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextNombreCli" />
 
     <EditText
         android:id="@+id/editTextNombreCli"
         android:layout_width="450dp"
         android:layout_height="45dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnOkCli"
+        app:layout_constraintStart_toStartOf="@+id/textView_nombreCli"
+        app:layout_constraintTop_toBottomOf="@+id/textView_nombreCli" />
 
     <TextView
         android:id="@+id/textView_nombreCli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="186dp"
+        android:layout_marginBottom="91dp"
         android:text="Introduzca un nombre de cliente:"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="144dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnOkCli"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

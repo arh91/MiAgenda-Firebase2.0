@@ -55,14 +55,14 @@ MainActivity : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            asignarDimensionesVistas()
+            //asignarDimensionesVistas()
             Toast.makeText(this@MainActivity, "LANDSCAPE!", Toast.LENGTH_SHORT).show()
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             Toast.makeText(this@MainActivity, "PORTRAIT!", Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun asignarDimensionesVistas(){
+    /*fun asignarDimensionesVistas(){
         val displayMetrics = resources.displayMetrics
         val screenWidth = displayMetrics.widthPixels
         val screenHeight = displayMetrics.heightPixels
@@ -101,7 +101,7 @@ MainActivity : AppCompatActivity() {
         titulooParams.setMargins(marginLeftTitle, marginTopTitle, 0, 0)
         title.layoutParams = titulooParams
 
-        val btnOne = findViewById<Button>(R.id.btnRegistroLand)
+        val btnOne = findViewById<Button>(R.id.btnRegistro)
         val btnRegistroParams = btnOne.layoutParams
         btnRegistroParams.width = widthButton // Asigna el valor calculado a la anchura de btnRegistroLand en el layout
         btnRegistroParams.height = heightButton // Asigna el valor calculado a la altura de btnRegistroLand en el layout
@@ -110,14 +110,14 @@ MainActivity : AppCompatActivity() {
         btnRegistrooParams.setMargins(marginLeftBtnRegistro, 0, 0, marginBottomBtnRegistro)
         btnOne.layoutParams = btnRegistrooParams
 
-        val btnTwo = findViewById<Button>(R.id.btnSalirLand)
+        val btnTwo = findViewById<Button>(R.id.btnSalir)
         val btnSalirParams = btnTwo.layoutParams
         btnSalirParams.width = widthButton
         btnSalirParams.height = heightButton
         btnTwo.layoutParams = btnSalirParams
         val btnSalirrParams = btnTwo.layoutParams as ConstraintLayout.LayoutParams
         btnSalirrParams.setMargins(0, 0, marginRightBtnSalir, marginBottomBtnSalir)
-    }
+    }*/
 
     /*@Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
