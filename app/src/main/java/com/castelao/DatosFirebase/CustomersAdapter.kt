@@ -18,8 +18,12 @@ class CustomersAdapter (private val data: List<String>, private val listener: On
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // Obtener la densidad de pantalla
+        //val density = context.resources.displayMetrics.density
+
         val item = data[position]
         holder.tvCode.text = item
+        //holder.tvCode.textSize = 16 * density // Tamaño de texto en dp
 
         holder.itemView.setOnClickListener {
             listener.accederDatosCliente(item)

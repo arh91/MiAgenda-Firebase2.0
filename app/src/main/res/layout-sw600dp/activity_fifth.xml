@@ -14,6 +14,7 @@
         android:layout_marginBottom="114dp"
         android:ems="10"
         android:hint="Código"
+        android:textSize="30sp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/edtNombreCliente"
         app:layout_constraintEnd_toEndOf="@+id/edtNombreCliente"
@@ -29,6 +30,7 @@
         android:layout_marginTop="257dp"
         android:ems="10"
         android:hint="Nombre"
+        android:textSize="30sp"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/edtDireccionCliente"
         app:layout_constraintStart_toStartOf="@+id/edtDireccionCliente"
@@ -42,6 +44,7 @@
         android:layout_marginBottom="120dp"
         android:ems="10"
         android:hint="Dirección"
+        android:textSize="30sp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/edtTelefonoCliente"
         app:layout_constraintEnd_toEndOf="@+id/edtTelefonoCliente"
@@ -56,6 +59,7 @@
         android:layout_marginBottom="300dp"
         android:ems="10"
         android:hint="Teléfono"
+        android:textSize="30sp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnAtrasFifth" />
@@ -63,7 +67,7 @@
     <Button
         android:id="@+id/btnEnviarCliente"
         android:layout_width="wrap_content"
-        android:layout_height="66dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="178dp"
         android:layout_marginBottom="176dp"
@@ -76,7 +80,7 @@
     <Button
         android:id="@+id/btnAtrasFifth"
         android:layout_width="wrap_content"
-        android:layout_height="66dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="115dp"
         android:layout_marginBottom="110dp"
@@ -101,7 +105,7 @@
     <Button
         android:id="@+id/btnListaClientes"
         android:layout_width="wrap_content"
-        android:layout_height="66dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:layout_marginBottom="59dp"
         android:text="LISTADO"

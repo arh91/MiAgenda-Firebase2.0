@@ -50,6 +50,7 @@
         android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/editText_nombre_prov"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editText_nombre_prov"
@@ -62,6 +63,7 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/editText_direccion_prov"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_direccion_prov"
@@ -74,6 +76,7 @@
         android:layout_marginTop="34dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/editText_telefono_prov"
         app:layout_constraintStart_toStartOf="@+id/editText_telefono_prov"
         app:layout_constraintTop_toBottomOf="@+id/editText_nombre_prov" />
@@ -86,13 +89,14 @@
         android:layout_marginTop="34dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/textView_telefono_prov"
         app:layout_constraintTop_toBottomOf="@+id/editText_direccion_prov" />
 
     <Button
         android:id="@+id/btn_Eliminar_prov"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginBottom="173dp"
         android:text="Eliminar"
@@ -103,7 +107,7 @@
     <Button
         android:id="@+id/btn_Modificar_prov"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="51dp"
         android:text="Modificar"
         android:textSize="25sp"
@@ -114,7 +118,7 @@
     <Button
         android:id="@+id/btn_Atras_Lista_Prov"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="51dp"
         android:text="Atrás"
