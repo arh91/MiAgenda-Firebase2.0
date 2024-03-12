@@ -8,75 +8,83 @@
 
     <EditText
         android:id="@+id/edtCodigoCliente"
-        android:layout_width="330dp"
+        android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="114dp"
         android:ems="10"
         android:hint="Código"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloFifth" />
+        app:layout_constraintBottom_toBottomOf="@+id/edtNombreCliente"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombreCliente"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreCliente"
+        app:layout_constraintTop_toTopOf="@+id/tituloFifth"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/edtNombreCliente"
-        android:layout_width="330dp"
+        android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="257dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/edtDireccionCliente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edtCodigoCliente" />
-
-    <EditText
-        android:id="@+id/edtDireccionCliente"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="401dp"
-        android:ems="10"
-        android:hint="Dirección"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtDireccionCliente"
+        app:layout_constraintStart_toStartOf="@+id/edtDireccionCliente"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtTelefonoCliente"
-        android:layout_width="330dp"
+        android:id="@+id/edtDireccionCliente"
+        android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:hint="Dirección"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edtTelefonoCliente"
+        app:layout_constraintEnd_toEndOf="@+id/edtTelefonoCliente"
+        app:layout_constraintStart_toStartOf="@+id/edtTelefonoCliente"
+        app:layout_constraintTop_toTopOf="@+id/edtNombreCliente" />
+
+    <EditText
+        android:id="@+id/edtTelefonoCliente"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="300dp"
         android:ems="10"
         android:hint="Teléfono"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtDireccionCliente" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnAtrasFifth" />
 
     <Button
         android:id="@+id/btnEnviarCliente"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginBottom="176dp"
         android:text="Registrar"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnAtrasFifth"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnAtrasFifth" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccionCliente" />
 
     <Button
         android:id="@+id/btnAtrasFifth"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="110dp"
         android:text="Atrás"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnListaClientes"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnListaClientes"
+        app:layout_constraintStart_toEndOf="@+id/btnListaClientes"
+        app:layout_constraintTop_toTopOf="@+id/edtTelefonoCliente" />
 
     <TextView
         android:id="@+id/tituloFifth"
@@ -84,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:text="NUEVO CLIENTE"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,11 +102,11 @@
         android:id="@+id/btnListaClientes"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="59dp"
         android:text="LISTADO"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtrasFifth" />
+        app:layout_constraintStart_toEndOf="@+id/btnEnviarCliente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
