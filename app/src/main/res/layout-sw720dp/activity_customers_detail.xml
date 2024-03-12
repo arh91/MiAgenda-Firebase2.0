@@ -65,6 +65,7 @@
         android:layout_marginBottom="95dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_nombre_cli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_codigo_cli"
@@ -79,6 +80,7 @@
         android:layout_marginBottom="245dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/editText_telefono_cli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_nombre_cli"
@@ -91,6 +93,7 @@
         android:layout_marginEnd="44dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="40sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_direccion_cli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_direccion_cli" />
@@ -102,6 +105,7 @@
         android:layout_marginEnd="44dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="40sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_telefono_cli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_telefono_cli" />
@@ -109,7 +113,7 @@
     <Button
         android:id="@+id/btn_Eliminar_cli"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="79dp"
         android:layout_marginBottom="233dp"
         android:text="Eliminar"
@@ -120,7 +124,7 @@
     <Button
         android:id="@+id/btn_Modificar_cli"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
         android:text="Modificar"
         android:textSize="30sp"
@@ -131,7 +135,7 @@
     <Button
         android:id="@+id/btn_Atras_Lista_Cli"
         android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="41dp"
         android:text="Atrás"

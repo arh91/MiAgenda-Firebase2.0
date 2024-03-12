@@ -21,8 +21,8 @@
     <Button
         android:id="@+id/btnAtrasRegistroClientes"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:text="ATRÁS"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/findCustomerByName"
@@ -31,9 +31,9 @@
 
     <Button
         android:id="@+id/findCustomerByName"
-        android:layout_width="wrap_content"
+        android:layout_width="420dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="139dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="97dp"
         android:text="Buscar por nombre"
         android:textSize="30sp"
@@ -63,8 +63,8 @@
 
     <Button
         android:id="@+id/btnOkCli"
-        android:layout_width="190dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="98dp"
         android:layout_marginEnd="177dp"
         android:text="Ok"
@@ -75,7 +75,7 @@
     <Button
         android:id="@+id/btnVolverListaCli"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="94dp"
         android:layout_marginEnd="62dp"
         android:text="Volver"

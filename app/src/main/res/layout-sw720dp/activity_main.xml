@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btnRegistro"
-        android:layout_width="241dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:text="Registro"
         android:textSize="34sp"
@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/btnSalir"
-        android:layout_width="249dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="107dp"
         android:text="Salir"
         android:textSize="34sp"
