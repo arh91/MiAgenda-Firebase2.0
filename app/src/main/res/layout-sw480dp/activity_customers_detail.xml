@@ -50,32 +50,35 @@
 
     <EditText
         android:id="@+id/editText_codigo_cli"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="41dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_codigo_cli"
         app:layout_constraintEnd_toEndOf="@+id/editText_nombre_cli"
         app:layout_constraintStart_toStartOf="@+id/editText_nombre_cli" />
 
     <EditText
         android:id="@+id/editText_nombre_cli"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="41dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_nombre_cli"
         app:layout_constraintEnd_toEndOf="@+id/editText_direccion_cli"
         app:layout_constraintStart_toStartOf="@+id/editText_direccion_cli" />
 
     <EditText
         android:id="@+id/editText_direccion_cli"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="41dp"
         android:layout_marginTop="68dp"
         android:layout_marginBottom="71dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_telefono_cli"
         app:layout_constraintEnd_toEndOf="@+id/editText_telefono_cli"
         app:layout_constraintStart_toStartOf="@+id/editText_telefono_cli"
@@ -83,11 +86,12 @@
 
     <EditText
         android:id="@+id/editText_telefono_cli"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="41dp"
         android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_telefono_cli"
         app:layout_constraintTop_toTopOf="parent" />
@@ -126,8 +130,8 @@
 
     <TextView
         android:id="@+id/textView_cli"
-        android:layout_width="133dp"
-        android:layout_height="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:layout_marginBottom="69dp"
         android:text="CLIENTE:"

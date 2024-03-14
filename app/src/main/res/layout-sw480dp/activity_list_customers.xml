@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/btnAtrasRegistroClientes"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="33dp"
@@ -35,7 +35,7 @@
     <Button
         android:id="@+id/findCustomerByName"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="33dp"
         android:text="Buscar por nombre"
@@ -66,14 +66,15 @@
         android:layout_marginBottom="170dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/findCustomerByName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_nombreCli" />
 
     <Button
         android:id="@+id/btnOkCli"
-        android:layout_width="99dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="571dp"
         android:layout_marginBottom="80dp"
         android:text="OK"
