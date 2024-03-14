@@ -18,43 +18,32 @@
     <Button
         android:id="@+id/btnFindSupplierByName"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="32dp"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
         android:text="Buscar por nombre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextNombreProv"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnAtrasRegistroProveedores"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="29dp"
-        android:maxWidth="@dimen/button_width_ratio"
-        android:maxHeight="@dimen/button_height_ratio"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="@+id/btnOkProv"
-        app:layout_constraintEnd_toEndOf="@+id/btnFindSupplierByName"
-        app:layout_constraintStart_toEndOf="@+id/editTextNombreProv"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnOkProv" />
 
     <Button
         android:id="@+id/btnOkProv"
-        android:layout_width="170dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="106dp"
-        android:layout_marginBottom="89dp"
-        android:maxWidth="@dimen/button_width_ratio"
-        android:maxHeight="@dimen/button_height_ratio"
-        android:minWidth="@dimen/button_width_ratio"
-        android:minHeight="@dimen/button_height_ratio"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="101dp"
         android:text="Ok"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_nombreProv"
         app:layout_constraintStart_toStartOf="@+id/editTextNombreProv" />
 
     <EditText
@@ -74,10 +63,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="186dp"
+        android:layout_marginTop="91dp"
         android:layout_marginBottom="91dp"
         android:text="Introduzca un nombre de proveedor:"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnOkProv"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnVolverListaProv" />
+
+    <Button
+        android:id="@+id/btnVolverListaProv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="100dp"
+        android:text="Volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
