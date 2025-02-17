@@ -12,11 +12,11 @@ The app provides several features for adding, modifying, and deleting clients an
 
 
 ## Features
-Store client and supplier data: Save and manage important details of clients and suppliers.
-View list of clients/suppliers: Easily browse through the list of all added clients and suppliers.
-Modify client/supplier data: Edit the stored data of a client or supplier when needed.
-Delete client/supplier: Remove clients or suppliers from the database.
-Real-time cloud synchronization: Data is stored and synchronized in real-time using Firebase Realtime Database.
+- Store client and supplier data: Save and manage important details of clients and suppliers.
+- View list of clients/suppliers: Easily browse through the list of all added clients and suppliers.
+- Modify client/supplier data: Edit the stored data of a client or supplier when needed.
+- Delete client/supplier: Remove clients or suppliers from the database.
+- Real-time cloud synchronization: Data is stored and synchronized in real-time using Firebase Realtime Database.
 
 
 ## Technologies Used
@@ -34,27 +34,27 @@ To get started with the app, follow these steps:
 - Firebase account (to set up Realtime Database)
 
 ## Installation
-1.Clone this repository:
+1. Clone this repository:
 
 ```sh
 git clone https://github.com/arh91/MiAgenda-Firebase2.0.git
 ```
-2.Open the project in Android Studio.
+2. Open the project in Android Studio.
 
-3.Add your Firebase configuration to the project:
+3. Add your Firebase configuration to the project:
 
 - Go to the Firebase console, create a new project, and set up Realtime Database.
 - Follow the instructions to integrate Firebase into your app, adding the google-services.json to your project.
   
-4.Run the app on an emulator or Android device.
+4. Run the app on an emulator or Android device.
 
 
 ## Usage
-1.Open the app.
-2.Add clients and suppliers by entering their data in the appropriate fields.
-3.View the list of all clients and suppliers.
-4.Modify or delete entries as needed by selecting the respective option.
-5.The app automatically synchronizes data with the cloud in real-time.
+1. Open the app.
+2. Add clients and suppliers by entering their data in the appropriate fields.
+3. View the list of all clients and suppliers.
+4. Modify or delete entries as needed by selecting the respective option.
+5. The app automatically synchronizes data with the cloud in real-time.
 
 
 ## Author
