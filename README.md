@@ -43,8 +43,8 @@ git clone https://github.com/arh91/MiAgenda-Firebase2.0.git
 
 3. Add your Firebase configuration to the project:
 
-    1. Go to the Firebase console, create a new project, and set up Realtime Database.
-    2. Follow the instructions to integrate Firebase into your app, adding the google-services.json to your project.
+    - Go to the Firebase console, create a new project, and set up Realtime Database.
+    - Follow the instructions to integrate Firebase into your app, adding the google-services.json to your project.
   
 4. Run the app on an emulator or Android device.
 
