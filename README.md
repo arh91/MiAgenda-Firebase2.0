@@ -29,11 +29,11 @@ The app provides several features for adding, modifying, and deleting clients an
 ## Getting Started
 To get started with the app, follow these steps:
 
-# Prerequisites
+### Prerequisites
 - Android Studio
 - Firebase account (to set up Realtime Database)
 
-## Installation
+### Installation
 1. Clone this repository:
 
 ```sh
