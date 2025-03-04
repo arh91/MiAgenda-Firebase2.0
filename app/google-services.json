@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "989104241757",
-    "project_id": "datosfirebase-d85fa",
-    "storage_bucket": "datosfirebase-d85fa.appspot.com"
+    "project_number": "myProjectNumber",
+    "project_id": "myProjectId",
+    "storage_bucket": "myStorageBucket"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:989104241757:android:4f0ab7c37895a04346a1b4",
+        "mobilesdk_app_id": "my_mobilesdk_app_id",
         "android_client_info": {
-          "package_name": "com.castelao.DatosFirebase"
-        }
+          "package_name": "my.project.package",
+        },
       },
       "oauth_client": [
         {
-          "client_id": "989104241757-ut20e16k3lf4g4l4b1asmt1mri34skuv.apps.googleusercontent.com",
+          "client_id": "my_client_id",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCk_88Tec82q8rG6mwMwYlaxRvPYxbxAKU"
+          "current_key": "my_current_key"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "989104241757-ut20e16k3lf4g4l4b1asmt1mri34skuv.apps.googleusercontent.com",
+              "client_id": "client_id",
               "client_type": 3
             }
           ]

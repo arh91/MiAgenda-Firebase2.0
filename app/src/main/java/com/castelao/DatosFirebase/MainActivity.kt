@@ -10,8 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
 
-class
-MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     // definir el requestCode
     val RESULTADO_UNO=1
